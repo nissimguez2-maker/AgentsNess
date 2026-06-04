@@ -16,7 +16,7 @@ You're building a SaaS MVP — a team retrospective tool for remote teams. You h
 | Frontend Developer | Build the React app |
 | Rapid Prototyper | Get the first version running fast |
 | Growth Hacker | Plan launch strategy while building |
-| Reality Checker | Gate each milestone before moving on |
+| QA Reality Checker | Gate each milestone before moving on |
 
 ## The Workflow
 
@@ -90,7 +90,7 @@ Focus on real-time: when one user adds a card, everyone sees it.
 **Step 5 — Reality Check at midpoint**
 
 ```
-Activate Reality Checker.
+Activate QA Reality Checker.
 
 We're at week 2 of a 4-week MVP build for RetroBoard.
 
@@ -128,7 +128,7 @@ Create a launch plan:
 **Step 7 — Final Reality Check**
 
 ```
-Activate Reality Checker.
+Activate QA Reality Checker.
 
 RetroBoard is ready to launch. Evaluate production readiness:
 
@@ -145,11 +145,11 @@ Require evidence for each criterion.
 
 1. **Sequential handoffs**: Each agent's output becomes the next agent's input
 2. **Parallel work**: UX Researcher and Sprint Prioritizer can run simultaneously in Week 1
-3. **Quality gates**: Reality Checker at midpoint and before launch prevents shipping broken code
+3. **Quality gates**: QA Reality Checker at midpoint and before launch prevents shipping broken code
 4. **Context passing**: Always paste previous agent outputs into the next prompt — agents don't share memory
 
 ## Tips
 
 - Copy-paste agent outputs between steps — don't summarize, use the full output
-- If a Reality Checker flags an issue, loop back to the relevant specialist to fix it
+- If a QA Reality Checker flags an issue, loop back to the relevant specialist to fix it
 - Keep the Orchestrator agent in mind for automating this flow once you're comfortable with the manual version

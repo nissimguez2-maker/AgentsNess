@@ -1,48 +1,25 @@
 # Examples
 
-This directory contains example outputs demonstrating how the agency's agents can be orchestrated together to tackle real-world tasks.
+Worked examples of orchestrating the agents together on real tasks — the concrete companion to the [NEXUS playbook](../strategy/nexus-playbook.md).
 
-## Why This Exists
+## Why this exists
 
-The agency-agents repo defines dozens of specialized agents across engineering, design, marketing, product, support, spatial computing, and project management. But agent definitions alone don't show what happens when you **deploy them all at once** on a single mission.
-
-These examples answer the question: *"What does it actually look like when the full agency collaborates?"*
+The agent definitions tell you what each specialist does; these show what it looks like when several **work together** on one objective — who hands off to whom, where the quality gates sit, and how the pipeline flows end to end.
 
 ## Contents
 
-### [nexus-spatial-discovery.md](./nexus-spatial-discovery.md)
+### [workflow-startup-mvp.md](./workflow-startup-mvp.md)
+**Multi-agent: idea → shipped MVP.** A step-by-step sprint coordinating product, design, engineering, and QA agents, with a quality gate at each milestone.
 
-**What:** A complete product discovery exercise where 8 agents worked in parallel to evaluate a software opportunity and produce a unified plan.
+### [workflow-landing-page.md](./workflow-landing-page.md)
+**Landing-page sprint in a day.** Ship a conversion-optimized landing page with four agents (design, copy, build, conversion).
 
-**The scenario:** Web research identified an opportunity at the intersection of AI agent orchestration and spatial computing. The entire agency was then deployed simultaneously to produce:
+### [workflow-book-chapter.md](./workflow-book-chapter.md)
+**Single-agent, deep iteration.** Turn rough source material into a strategic first-person chapter draft with explicit revision loops.
 
-- Market validation and competitive analysis
-- Technical architecture (8-service system design with full SQL schema)
-- Brand strategy and visual identity
-- Go-to-market and growth plan
-- Customer support operations blueprint
-- UX research plan with personas and journey maps
-- 35-week project execution plan with 65 sprint tickets
-- Spatial interface architecture specification
+### [workflow-with-memory.md](./workflow-with-memory.md)
+**The MVP workflow + persistent memory.** The same startup-MVP sprint, but with an MCP memory server holding state between agents — no copy-paste handoffs, and tighter recovery loops when the QA Reality Checker sends something back.
 
-**Agents used:**
-| Agent | Role |
-|-------|------|
-| Product Trend Researcher | Market validation, competitive landscape |
-| Backend Architect | System architecture, data model, API design |
-| Brand Guardian | Positioning, visual identity, naming |
-| Growth Hacker | GTM strategy, pricing, launch plan |
-| Support Responder | Support tiers, onboarding, community |
-| UX Researcher | Personas, journey maps, design principles |
-| Project Shepherd | Phase plan, sprints, risk register |
-| XR Interface Architect | Spatial UI specification |
+## Adding new examples
 
-**Key takeaway:** All 8 agents ran in parallel and produced coherent, cross-referencing plans without coordination overhead. The output demonstrates the agency's ability to go from "find an opportunity" to "here's the full blueprint" in a single session.
-
-## Adding New Examples
-
-If you run an interesting multi-agent exercise, consider adding it here. Good examples show:
-
-- Multiple agents collaborating on a shared objective
-- The breadth of the agency's capabilities
-- Real-world applicability of the agent definitions
+Good examples show multiple agents collaborating on a shared objective, the breadth of the roster, and real-world applicability. Reference agents by their current names (see the [roster](../README.md#-the-agency-roster)).
