@@ -10,22 +10,16 @@
 
 set -euo pipefail
 
-# Keep in sync with AGENT_DIRS in scripts/convert.sh
+# Keep in sync with AGENT_DIRS in scripts/convert.sh and check-agent-originality.sh
 AGENT_DIRS=(
-  academic
-  design
+  advisory
   engineering
   finance
-  game-development
+  growth
   marketing
-  paid-media
+  operations
   product
-  project-management
-  sales
-  spatial-computing
-  specialized
-  support
-  testing
+  revenue
 )
 
 REQUIRED_FRONTMATTER=("name" "description" "color")

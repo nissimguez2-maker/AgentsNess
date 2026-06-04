@@ -54,7 +54,7 @@ Same as the standard workflow: a SaaS team retrospective tool (RetroBoard), 4 we
 | Frontend Developer | Build the React app |
 | Rapid Prototyper | Get the first version running fast |
 | Growth Hacker | Plan launch strategy while building |
-| Reality Checker | Gate each milestone before moving on |
+| QA Reality Checker | Gate each milestone before moving on |
 
 Each agent has a Memory Integration section in their prompt (see [integrations/mcp-memory/README.md](../integrations/mcp-memory/README.md) for how to add it).
 
@@ -139,7 +139,7 @@ The Frontend Developer pulls the API spec from memory and builds against it.
 **Step 5 — Reality Check at midpoint**
 
 ```
-Activate Reality Checker.
+Activate QA Reality Checker.
 
 Project: RetroBoard. We're at week 2 of a 4-week MVP build.
 
@@ -153,7 +153,7 @@ Evaluate:
 Remember your verdict tagged for this project.
 ```
 
-The Reality Checker has full visibility into everything produced so far — the sprint plan, research brief, schema, API spec, and frontend progress — without you having to collect and paste it all.
+The QA Reality Checker has full visibility into everything produced so far — the sprint plan, research brief, schema, API spec, and frontend progress — without you having to collect and paste it all.
 
 ### Week 3: Polish + Landing Page
 
@@ -166,7 +166,7 @@ Product: RetroBoard — team retrospective tool, launching in 1 week.
 Target: Engineering managers and scrum masters at remote-first companies.
 Budget: $0 (organic launch only).
 
-Recall the project context and Reality Checker's verdict.
+Recall the project context and QA Reality Checker's verdict.
 
 Create a launch plan:
 1. Landing page copy (hero, features, CTA)
@@ -182,7 +182,7 @@ Remember the launch plan tagged for this project.
 **Step 7 — Final Reality Check**
 
 ```
-Activate Reality Checker.
+Activate QA Reality Checker.
 
 Project: RetroBoard, ready to launch.
 
@@ -200,18 +200,18 @@ Require evidence for each criterion.
 
 ### When QA Fails: Rollback
 
-In the standard workflow, when the Reality Checker rejects a deliverable, you go back to the responsible agent and try to explain what went wrong. With memory, the recovery loop is tighter:
+In the standard workflow, when the QA Reality Checker rejects a deliverable, you go back to the responsible agent and try to explain what went wrong. With memory, the recovery loop is tighter:
 
 ```
 Activate Backend Architect.
 
-Project: RetroBoard. The Reality Checker flagged issues with the API design.
-Recall the Reality Checker's feedback and your previous API spec.
+Project: RetroBoard. The QA Reality Checker flagged issues with the API design.
+Recall the QA Reality Checker's feedback and your previous API spec.
 Roll back to your last known-good schema and address the specific issues raised.
 Remember the updated deliverables when done.
 ```
 
-The Backend Architect can see exactly what the Reality Checker flagged, recall its own previous work, roll back to a checkpoint, and produce a fix — all without you manually tracking versions.
+The Backend Architect can see exactly what the QA Reality Checker flagged, recall its own previous work, roll back to a checkpoint, and produce a fix — all without you manually tracking versions.
 
 ## Before and After
 
@@ -228,7 +228,7 @@ The Backend Architect can see exactly what the Reality Checker flagged, recall i
 
 1. **Tag everything with the project name**: This is what makes recall work. Every memory gets tagged with `retroboard` (or whatever your project is).
 2. **Tag deliverables for the receiving agent**: When the Backend Architect finishes an API spec, it tags the memory with `frontend-developer` so the Frontend Developer finds it on recall.
-3. **Reality Checker gets full visibility**: Because all agents store their work in memory, the Reality Checker can recall everything for the project without you compiling it.
+3. **QA Reality Checker gets full visibility**: Because all agents store their work in memory, the QA Reality Checker can recall everything for the project without you compiling it.
 4. **Rollback replaces manual undo**: When something fails, roll back to the last checkpoint instead of trying to figure out what changed.
 
 ## Tips

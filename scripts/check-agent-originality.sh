@@ -47,9 +47,8 @@ REPO_ROOT = os.environ["REPO_ROOT"]
 FAIL = float(os.environ["ORIGINALITY_FAIL"])
 WARN = float(os.environ["ORIGINALITY_WARN"])
 
-AGENT_DIRS = ("academic design engineering finance game-development marketing "
-              "paid-media product project-management sales spatial-computing "
-              "specialized strategy support testing").split()
+AGENT_DIRS = ("advisory engineering finance growth marketing "
+              "operations product revenue").split()
 
 # Proper nouns we neutralize so a find-replace re-skin (swap the country/platform
 # and little else) still scores as a near-duplicate. Extend as new markets appear.

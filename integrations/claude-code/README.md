@@ -22,7 +22,7 @@ Activate Frontend Developer and help me build a React component.
 ```
 
 ```
-Use the Reality Checker agent to verify this feature is production-ready.
+Use the QA Reality Checker agent to verify this feature is production-ready.
 ```
 
 ## Agent Directory

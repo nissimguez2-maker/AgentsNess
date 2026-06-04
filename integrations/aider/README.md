@@ -20,7 +20,7 @@ Use the Frontend Developer agent to refactor this component.
 ```
 
 ```
-Apply the Reality Checker agent to verify this is production-ready.
+Apply the QA Reality Checker agent to verify this is production-ready.
 ```
 
 ## Manual Usage
