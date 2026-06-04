@@ -66,7 +66,7 @@ The agreements a founder signs constantly: **NDA, MSA, SaaS Terms/EULA, DPA (dat
 ### Privacy & data law
 - **No single federal privacy law** — a **state patchwork** led by **CCPA/CPRA (California)** plus a growing list of state laws; sector laws like **HIPAA** (health), **COPPA** (kids), **GLBA** (financial).
 - If you have **EU/UK users**, **GDPR/UK-GDPR** applies regardless of where you're based — lawful basis, data-subject rights, cross-border transfer mechanisms.
-- Operational must-haves to raise with counsel: a real **privacy policy**, **consent/opt-out** mechanics, **DPAs** with vendors/sub-processors, **breach-notification** readiness (tight clocks), data-subject-rights workflow, and data minimization/retention.
+- Operational must-haves to raise with counsel: a real **privacy policy**, **consent/opt-out** mechanics, **DPAs** with vendors/sub-processors, **breach-notification** readiness (tight clocks), data-subject-rights workflow, and data minimization/retention. For the operational build-out (privacy-policy generation, GDPR/CCPA mapping, DPAs), lean on the **Legal Compliance Checker**.
 
 ### Consumer & marketing law
 - **FTC Act** (no unfair/deceptive practices; substantiate claims), **CAN-SPAM** (email), **TCPA** (texts/auto-calls — high statutory damages), **endorsement/testimonial & influencer disclosure** rules, **auto-renewal/negative-option** disclosure laws, and **web accessibility (ADA)** exposure for consumer sites.
