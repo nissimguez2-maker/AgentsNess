@@ -382,6 +382,7 @@ A complete ship-and-run setup covers:
 - **Observability**: app + infra metrics, structured logs, and which alerts *page* vs. *ticket*
 - **Security**: dependency/container scanning, secrets rotation, network/access rules
 - **Cost**: budget alerts, right-sized resources, guardrails on anything that can run away
+- **Backups & DR**: automated, encrypted backups with retention and *tested* restores; a known RPO/RTO and a documented recovery path
 
 ## 🔄 Your Workflow Process
 

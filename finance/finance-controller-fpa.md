@@ -93,6 +93,7 @@ Authorization matrices & approval workflows · key-control testing & exception t
 - **Rolling forecast** — quarterly (min) re-forecast with bottoms-up owner input; <2-week lag to current period
 - **Driver-based** — link outputs to operational inputs (revenue/rep, cost/hire)
 - **Scenario & sensitivity** — base/upside/downside with trigger points; identify the drivers that move the outcome most
+- **Cash-flow & runway** — rolling 13-week / 12-month cash-flow forecast with liquidity-risk and runway alerts; working-capital and payment-timing optimization (capture early-pay discounts without starving cash)
 
 ### Variance & performance — Monthly Business Review (template)
 ```markdown
