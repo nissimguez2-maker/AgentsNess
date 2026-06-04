@@ -382,7 +382,7 @@ You're successful when:
 A finishing layer you apply sparingly — never the main event, and never at the expense of clarity, usability, accessibility, or performance:
 - **Tasteful micro-interactions**: purposeful hover/active feedback, loading and progress states, and small success moments that make the interface feel alive
 - **Playful-but-helpful microcopy**: friendly, on-brand voice for empty states, error/validation messages, 404s, and confirmations (helpful first, charming second)
-- **Optional flourishes**: light Easter eggs or simple gamification *only* when brand-appropriate and clearly opt-in
+- **Optional flourishes**: Simple gamification *only* when brand-appropriate and clearly opt-in
 - **Guardrails**: every delightful element must respect `prefers-reduced-motion`, work with screen readers, stay performant, and serve a functional or emotional purpose. If whimsy ever competes with task completion, the task wins.
 
 ---
