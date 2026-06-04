@@ -75,335 +75,153 @@ See the [Multi-Tool Integrations](#-multi-tool-integrations) section below for f
 
 ## 🎨 The Agency Roster
 
-### 💻 Engineering Division
+### 💻 Engineering & AI
 
-Building the future, one commit at a time.
+| Agent | What it does |
+|---|---|
+| [🎛️ Agent & Workflow Orchestrator](engineering/Agent%20%26%20Workflow%20Orchestrator.md) | Designs the workflow before it's built and orchestrates the agents that build it. Maps every path through a system — happy paths, branches, failure… |
+| [🔐 Agent Identity & Trust](engineering/Agent%20Identity%20%26%20Trust.md) | Owns both layers of identity in a multi-agent system. Layer 1 — agent identity & trust: cryptographic identity, authentication, scoped delegation… |
+| [🤖 AI Engineer](engineering/AI%20Engineer.md) | Expert AI/ML engineer specializing in machine learning model development, deployment, and integration into production systems. Focused on building… |
+| [🔌 API Tester](engineering/API%20Tester.md) | Expert API testing specialist focused on comprehensive API validation, performance testing, and quality assurance across all systems and third-party… |
+| [⚙️ Automation Governance Architect](engineering/Automation%20Governance%20Architect.md) | Governance-first architect for business automations (n8n-first) who audits value, risk, and maintainability before implementation. |
+| [🏗️ Backend Architect](engineering/Backend%20Architect.md) | Senior backend architect specializing in scalable system design, database architecture with query and performance tuning, API development, and cloud… |
+| [🧱 CMS Developer](engineering/CMS%20Developer.md) | Drupal and WordPress specialist for theme development, custom plugins/modules, content architecture, and code-first CMS implementation |
+| [👁️ Code Reviewer & Quality](engineering/Code%20Reviewer%20%26%20Quality.md) | Reviews code for correctness, security, maintainability, and performance; makes surgical minimum-viable changes that refuse scope creep; and explains… |
+| [📋 Compliance Auditor](engineering/Compliance%20Auditor.md) | Expert technical compliance auditor specializing in SOC 2, ISO 27001, HIPAA, and PCI-DSS audits — from readiness assessment through evidence… |
+| [🔧 Data Engineer](engineering/Data%20Engineer.md) | Expert data engineer specializing in building reliable data pipelines, lakehouse architectures, and scalable data infrastructure. Masters ETL/ELT,… |
+| [🚀 DevOps & Reliability Engineer](engineering/DevOps%20%26%20Reliability%20Engineer.md) | Ships and runs your app end to end — CI/CD and deploys, infrastructure-as-code, observability and SLOs, incident command and post-mortems, on-call,… |
+| [📧 Email Intelligence Engineer](engineering/Email%20Intelligence%20Engineer.md) | Expert in extracting structured, reasoning-ready data from raw email threads for AI agents and automation systems |
+| [🖥️ Frontend Developer](engineering/Frontend%20Developer.md) | Expert frontend developer specializing in modern web technologies, React/Vue/Angular frameworks, UI implementation, and performance optimization |
+| [🔌 MCP Builder](engineering/MCP%20Builder.md) | Expert Model Context Protocol developer who designs, builds, and tests MCP servers that extend AI agent capabilities with custom tools, resources,… |
+| [📲 Mobile App Builder](engineering/Mobile%20App%20Builder.md) | Specialized mobile application developer with expertise in native iOS/Android development and cross-platform frameworks |
+| [🧬 Prompt Engineer](engineering/Prompt%20Engineer.md) | Specialist in crafting, testing, and systematically optimizing prompts for LLMs — turning vague instructions into reliable, production-grade AI… |
+| [🧪 QA Engineer](engineering/QA%20Engineer.md) | Hands-on QA across performance (load/stress testing, Core Web Vitals), accessibility (WCAG 2.2 AA, assistive-tech), and test-results/quality analysis… |
+| [🧐 QA Reality Checker](engineering/QA%20Reality%20Checker.md) | Skeptical, evidence-obsessed QA gate that stops fantasy approvals — demands visual/recorded proof for every claim, defaults to "NEEDS WORK,"… |
+| [⚡ Rapid Prototyper](engineering/Rapid%20Prototyper.md) | Specialized in ultra-fast proof-of-concept development and MVP creation using efficient tools and frameworks |
+| [🔒 Security Engineer](engineering/Security%20Engineer.md) | Expert application security engineer specializing in threat modeling, vulnerability assessment, secure code review, security architecture design,… |
+| [⛓️ Smart Contract Engineer & Security Auditor](engineering/Smart%20Contract%20Engineer%20%26%20Security%20Auditor.md) | Expert Solidity/EVM smart contract engineer and security auditor — builds gas-optimized, upgradeable, security-first contracts and DeFi protocols,… |
+| [🏛️ Software Architect](engineering/Software%20Architect.md) | Expert software architect specializing in system design, domain-driven design, architectural patterns, and technical decision-making for scalable,… |
+| [📚 Technical Writer](engineering/Technical%20Writer.md) | Expert technical writer specializing in developer documentation, API references, README files, and tutorials. Transforms complex engineering concepts… |
+| [🎙️ Voice AI Integration Engineer](engineering/Voice%20AI%20Integration%20Engineer.md) | Expert in building end-to-end speech transcription pipelines using Whisper-style models and cloud ASR services — from raw audio ingestion through… |
+| [🗃️ ZK Steward](engineering/ZK%20Steward.md) | Knowledge-base steward in the spirit of Niklas Luhmann's Zettelkasten. Default perspective: Luhmann; switches to domain experts (Feynman, Munger,… |
 
-| Agent | Specialty | When to Use |
-|-------|-----------|-------------|
-| 🎨 [Frontend Developer](engineering/engineering-frontend-developer.md) | React/Vue/Angular, UI implementation, performance | Modern web apps, pixel-perfect UIs, Core Web Vitals optimization |
-| 🏗️ [Backend Architect](engineering/engineering-backend-architect.md) | API design, database architecture, scalability | Server-side systems, microservices, cloud infrastructure |
-| 📱 [Mobile App Builder](engineering/engineering-mobile-app-builder.md) | iOS/Android, React Native, Flutter | Native and cross-platform mobile applications |
-| 🤖 [AI Engineer](engineering/engineering-ai-engineer.md) | ML models, deployment, AI integration | Machine learning features, data pipelines, AI-powered apps |
-| 🚀 [DevOps Automator](engineering/engineering-devops-automator.md) | CI/CD, infrastructure automation, cloud ops | Pipeline development, deployment automation, monitoring |
-| ⚡ [Rapid Prototyper](engineering/engineering-rapid-prototyper.md) | Fast POC development, MVPs | Quick proof-of-concepts, hackathon projects, fast iteration |
-| 💎 [Senior Developer](engineering/engineering-senior-developer.md) | Laravel/Livewire, advanced patterns | Complex implementations, architecture decisions |
-| 🔧 [Filament Optimization Specialist](engineering/engineering-filament-optimization-specialist.md) | Filament PHP admin UX, structural form redesign, resource optimization | Restructuring Filament resources/forms/tables for faster, cleaner admin workflows |
-| 🔒 [Security Engineer](engineering/engineering-security-engineer.md) | Threat modeling, secure code review, security architecture | Application security, vulnerability assessment, security CI/CD |
-| ⚡ [Autonomous Optimization Architect](engineering/engineering-autonomous-optimization-architect.md) | LLM routing, cost optimization, shadow testing | Autonomous systems needing intelligent API selection and cost guardrails |
-| 🔩 [Embedded Firmware Engineer](engineering/engineering-embedded-firmware-engineer.md) | Bare-metal, RTOS, ESP32/STM32/Nordic firmware | Production-grade embedded systems and IoT devices |
-| 🚨 [Incident Response Commander](engineering/engineering-incident-response-commander.md) | Incident management, post-mortems, on-call | Managing production incidents and building incident readiness |
-| ⛓️ [Solidity Smart Contract Engineer](engineering/engineering-solidity-smart-contract-engineer.md) | EVM contracts, gas optimization, DeFi | Secure, gas-optimized smart contracts and DeFi protocols |
-| 🧭 [Codebase Onboarding Engineer](engineering/engineering-codebase-onboarding-engineer.md) | Fast developer onboarding, read-only codebase exploration, factual explanation | Helping new developers understand unfamiliar repos quickly by reading the code, tracing code paths, and stating facts about structure and behavior |
-| 📚 [Technical Writer](engineering/engineering-technical-writer.md) | Developer docs, API reference, tutorials | Clear, accurate technical documentation |
-| 🎯 [Threat Detection Engineer](engineering/engineering-threat-detection-engineer.md) | SIEM rules, threat hunting, ATT&CK mapping | Building detection layers and threat hunting |
-| 💬 [WeChat Mini Program Developer](engineering/engineering-wechat-mini-program-developer.md) | WeChat ecosystem, Mini Programs, payment integration | Building performant apps for the WeChat ecosystem |
-| 👁️ [Code Reviewer](engineering/engineering-code-reviewer.md) | Constructive code review, security, maintainability | PR reviews, code quality gates, mentoring through review |
-| 🗄️ [Database Optimizer](engineering/engineering-database-optimizer.md) | Schema design, query optimization, indexing strategies | PostgreSQL/MySQL tuning, slow query debugging, migration planning |
-| 🌿 [Git Workflow Master](engineering/engineering-git-workflow-master.md) | Branching strategies, conventional commits, advanced Git | Git workflow design, history cleanup, CI-friendly branch management |
-| 🏛️ [Software Architect](engineering/engineering-software-architect.md) | System design, DDD, architectural patterns, trade-off analysis | Architecture decisions, domain modeling, system evolution strategy |
-| 🛡️ [SRE](engineering/engineering-sre.md) | SLOs, error budgets, observability, chaos engineering | Production reliability, toil reduction, capacity planning |
-| 🧬 [AI Data Remediation Engineer](engineering/engineering-ai-data-remediation-engineer.md) | Self-healing pipelines, air-gapped SLMs, semantic clustering | Fixing broken data at scale with zero data loss |
-| 🔧 [Data Engineer](engineering/engineering-data-engineer.md) | Data pipelines, lakehouse architecture, ETL/ELT | Building reliable data infrastructure and warehousing |
-| 🔗 [Feishu Integration Developer](engineering/engineering-feishu-integration-developer.md) | Feishu/Lark Open Platform, bots, workflows | Building integrations for the Feishu ecosystem |
-| 🧱 [CMS Developer](engineering/engineering-cms-developer.md) | WordPress & Drupal themes, plugins/modules, content architecture | Code-first CMS implementation and customization |
-| 📧 [Email Intelligence Engineer](engineering/engineering-email-intelligence-engineer.md) | Email parsing, MIME extraction, structured data for AI agents | Turning raw email threads into reasoning-ready context |
-| 🎙️ [Voice AI Integration Engineer](engineering/engineering-voice-ai-integration-engineer.md) | Speech-to-text pipelines, Whisper, ASR, speaker diarization | End-to-end transcription pipelines, audio preprocessing, structured transcript delivery |
-| 🖧 [IT Service Manager](engineering/engineering-it-service-manager.md) | ITIL 4 service management | Incident/problem/change management, SLAs, CMDB |
-| 🪡 [Minimal Change Engineer](engineering/engineering-minimal-change-engineer.md) | Minimum-viable diffs | Fixing only what's asked, no scope creep |
-| 📜 [OrgScript Engineer](engineering/engineering-orgscript-engineer.md) | OrgScript grammar & AST validation | Designing/parsing OrgScript business-logic definitions |
-| 🧬 [Prompt Engineer](engineering/engineering-prompt-engineer.md) | LLM prompt design & optimization | Turning vague instructions into reliable AI behaviors |
+### 🎨 Product & Design
 
-### 🎨 Design Division
+| Agent | What it does |
+|---|---|
+| [🖼️ AI Visual Generation Specialist](product/AI%20Visual%20Generation%20Specialist.md) | Expert AI image and video generation specialist who turns visual concepts into precise, structured prompts for professional-quality output across… |
+| [🧠 Behavioral Engagement & Retention Designer](product/Behavioral%20Engagement%20%26%20Retention%20Designer.md) | Behavioral-science specialist who designs the in-product interactions, nudges, and cadences that drive activation, engagement, habit formation, and… |
+| [🎨 Brand Guardian](product/Brand%20Guardian.md) | Expert brand strategist and guardian specializing in brand identity development, consistency maintenance, and strategic brand positioning |
+| [🔭 Product & Market Research](product/Product%20%26%20Market%20Research.md) | Research & insights engine combining outside-in market intelligence (emerging trends, competitive analysis, opportunity sizing, tech scouting) with… |
+| [🧭 Product Manager](product/Product%20Manager.md) | Holistic product leader who owns the full product lifecycle — from discovery and strategy through prioritization (RICE/MoSCoW/Kano), roadmap, sprint… |
+| [🎨 UI Designer](product/UI%20Designer.md) | Expert UI designer specializing in visual design systems, component libraries, and pixel-perfect interface creation. Creates beautiful, consistent,… |
+| [📐 UX Architect](product/UX%20Architect.md) | Technical architecture and UX specialist who provides developers with solid foundations, CSS systems, and clear implementation guidance |
+| [🔬 UX Researcher](product/UX%20Researcher.md) | Expert user experience researcher specializing in user behavior analysis, usability testing, and data-driven design insights. Provides actionable… |
+| [🎬 Visual Storyteller](product/Visual%20Storyteller.md) | Expert visual communication specialist focused on creating compelling visual narratives, multimedia content, and brand storytelling through design.… |
 
-Making it beautiful, usable, and delightful.
+### 📢 Marketing & Content
 
-| Agent | Specialty | When to Use |
-|-------|-----------|-------------|
-| 🎯 [UI Designer](design/design-ui-designer.md) | Visual design, component libraries, design systems | Interface creation, brand consistency, component design |
-| 🔍 [UX Researcher](design/design-ux-researcher.md) | User testing, behavior analysis, research | Understanding users, usability testing, design insights |
-| 🏛️ [UX Architect](design/design-ux-architect.md) | Technical architecture, CSS systems, implementation | Developer-friendly foundations, implementation guidance |
-| 🎭 [Brand Guardian](design/design-brand-guardian.md) | Brand identity, consistency, positioning | Brand strategy, identity development, guidelines |
-| 📖 [Visual Storyteller](design/design-visual-storyteller.md) | Visual narratives, multimedia content | Compelling visual stories, brand storytelling |
-| ✨ [Whimsy Injector](design/design-whimsy-injector.md) | Personality, delight, playful interactions | Adding joy, micro-interactions, Easter eggs, brand personality |
-| 📷 [Image Prompt Engineer](design/design-image-prompt-engineer.md) | AI image generation prompts, photography | Photography prompts for Midjourney, DALL-E, Stable Diffusion |
-| 🌈 [Inclusive Visuals Specialist](design/design-inclusive-visuals-specialist.md) | Representation, bias mitigation, authentic imagery | Generating culturally accurate AI images and video |
-| 🎭 [Persona Walkthrough Specialist](design/design-persona-walkthrough.md) | Persona-driven cognitive walkthroughs | Simulating user reactions and friction at each scroll position |
+| Agent | What it does |
+|---|---|
+| [🔮 AI Search & Answer-Engine Optimizer](marketing/AI%20Search%20%26%20Answer-Engine%20Optimizer.md) | End-to-end AEO/GEO specialist across the three waves of AI-driven traffic — Foundations (AI-crawler access, llms.txt, parseability, schema),… |
+| [🎠 Carousel Growth Engine](marketing/Carousel%20Growth%20Engine.md) | Autonomous TikTok and Instagram carousel generation specialist. Analyzes any website URL with Playwright, generates viral 6-slide carousels via… |
+| [✍️ Content Creator](marketing/Content%20Creator.md) | Expert content strategist and creator for multi-platform campaigns. Develops editorial calendars, creates compelling copy, manages brand… |
+| [🎙️ Global Podcast Strategist](marketing/Global%20Podcast%20Strategist.md) | Expert podcast growth specialist focused on show positioning, audience development, content strategy, and monetisation. Transforms raw ideas into… |
+| [📸 Instagram Curator](marketing/Instagram%20Curator.md) | Expert Instagram marketing specialist focused on visual storytelling, community building, and multi-format content optimization. Masters aesthetic… |
+| [💼 LinkedIn Content Creator](marketing/LinkedIn%20Content%20Creator.md) | Expert LinkedIn content strategist focused on thought leadership, personal brand building, and high-engagement professional content. Masters… |
+| [📣 PR & Communications Manager](marketing/PR%20%26%20Communications%20Manager.md) | Strategic public relations and communications specialist for media relations, press releases, crisis communications, executive thought leadership,… |
+| [💬 Reddit Community Builder](marketing/Reddit%20Community%20Builder.md) | Expert Reddit marketing specialist focused on authentic community engagement, value-driven content creation, and long-term relationship building.… |
+| [🔍 SEO Specialist](marketing/SEO%20Specialist.md) | Expert search engine optimization strategist specializing in technical SEO, content optimization, link authority building, and organic search growth.… |
+| [🎬 Short-Video Editing Coach](marketing/Short-Video%20Editing%20Coach.md) | Hands-on short-video editing coach covering the full post-production pipeline, with mastery of CapCut Pro, Premiere Pro, DaVinci Resolve, and Final… |
+| [📣 Social Media Strategist](marketing/Social%20Media%20Strategist.md) | Expert social media strategist for LinkedIn, Twitter, and professional platforms. Creates cross-platform campaigns, builds communities, manages… |
+| [🎵 TikTok Strategist](marketing/TikTok%20Strategist.md) | Expert TikTok marketing specialist focused on viral content creation, algorithm optimization, and community building. Masters TikTok's unique culture… |
+| [🎬 Video Optimization Specialist](marketing/Video%20Optimization%20Specialist.md) | Video marketing strategist specializing in YouTube algorithm optimization, audience retention, chaptering, thumbnail concepts, and cross-platform… |
+| [🐦 X/Twitter Strategist](marketing/X-Twitter%20Strategist.md) | Full X/Twitter operator — builds presence (real-time engagement, thought-leadership threads, Spaces, community growth, crisis response) AND reads the… |
 
-### 💰 Paid Media Division
+### 📈 Growth & Performance
 
-Turning ad spend into measurable business outcomes.
+| Agent | What it does |
+|---|---|
+| [✍️ Ad Creative Strategist](growth/Ad%20Creative%20Strategist.md) | Paid media creative specialist focused on ad copywriting, RSA optimization, asset group design, and creative testing frameworks across Google, Meta,… |
+| [📱 App Store Optimizer](growth/App%20Store%20Optimizer.md) | Expert app store marketing specialist focused on App Store Optimization (ASO), conversion rate optimization, and app discoverability |
+| [🎭 CRO / Conversion Auditor](growth/CRO%20-%20Conversion%20Auditor.md) | Conversion-rate-optimization (CRO) auditor that simulates cognitive walkthroughs of web pages from a defined persona's perspective — capturing… |
+| [🌏 Cross-Border E-Commerce Specialist](growth/Cross-Border%20E-Commerce%20Specialist.md) | Full-funnel cross-border e-commerce strategist covering Amazon, Shopee, Lazada, AliExpress, Temu, and TikTok Shop operations, international logistics… |
+| [📧 Email Marketing Strategist](growth/Email%20Marketing%20Strategist.md) | Expert email marketing strategist for CRM-driven campaigns, lifecycle automation, segmentation architecture, and deliverability. Designs sequences… |
+| [🚀 Growth Hacker](growth/Growth%20Hacker.md) | Expert growth strategist specializing in rapid user acquisition through data-driven experimentation. Develops viral loops, optimizes conversion… |
+| [📋 Paid Media Auditor](growth/Paid%20Media%20Auditor.md) | Comprehensive paid media auditor who systematically evaluates Google Ads, Microsoft Ads, and Meta accounts across 200+ checkpoints spanning account… |
+| [📱 Paid Social Strategist](growth/Paid%20Social%20Strategist.md) | Cross-platform paid social advertising specialist covering Meta (Facebook/Instagram), LinkedIn, TikTok, Pinterest, X, and Snapchat. Designs… |
+| [💰 PPC Campaign Strategist](growth/PPC%20Campaign%20Strategist.md) | Senior paid-search strategist for large-scale search, shopping, and Performance Max campaigns across Google, Microsoft, and Amazon — covering account… |
+| [📺 Programmatic & Display Buyer](growth/Programmatic%20%26%20Display%20Buyer.md) | Display advertising and programmatic media buying specialist covering managed placements, Google Display Network, DV360, trade desk platforms,… |
+| [📡 Tracking & Measurement Specialist](growth/Tracking%20%26%20Measurement%20Specialist.md) | Expert in conversion tracking architecture, tag management, and attribution modeling across Google Tag Manager, GA4, Google Ads, Meta CAPI, LinkedIn… |
 
-| Agent | Specialty | When to Use |
-| --- | --- | --- |
-| 💰 [PPC Campaign Strategist](paid-media/paid-media-ppc-strategist.md) | Google/Microsoft/Amazon Ads, account architecture, bidding | Account buildouts, budget allocation, scaling, performance diagnosis |
-| 🔍 [Search Query Analyst](paid-media/paid-media-search-query-analyst.md) | Search term analysis, negative keywords, intent mapping | Query audits, wasted spend elimination, keyword discovery |
-| 📋 [Paid Media Auditor](paid-media/paid-media-auditor.md) | 200+ point account audits, competitive analysis | Account takeovers, quarterly reviews, competitive pitches |
-| 📡 [Tracking & Measurement Specialist](paid-media/paid-media-tracking-specialist.md) | GTM, GA4, conversion tracking, CAPI | New implementations, tracking audits, platform migrations |
-| ✍️ [Ad Creative Strategist](paid-media/paid-media-creative-strategist.md) | RSA copy, Meta creative, Performance Max assets | Creative launches, testing programs, ad fatigue refreshes |
-| 📺 [Programmatic & Display Buyer](paid-media/paid-media-programmatic-buyer.md) | GDN, DSPs, partner media, ABM display | Display planning, partner outreach, ABM programs |
-| 📱 [Paid Social Strategist](paid-media/paid-media-paid-social-strategist.md) | Meta, LinkedIn, TikTok, cross-platform social | Social ad programs, platform selection, audience strategy |
+### 💼 Sales & Customer
 
-### 💼 Sales Division
+| Agent | What it does |
+|---|---|
+| [🗺️ Account Strategist](revenue/Account%20Strategist.md) | Expert post-sale account strategist specializing in land-and-expand execution, stakeholder mapping, QBR facilitation, and net revenue retention.… |
+| [🎧 Customer Service](revenue/Customer%20Service.md) | Friendly, professional customer service specialist for any industry — handling inquiries, complaints, account support, FAQs, and seamless escalation… |
+| [🌟 Customer Success Manager](revenue/Customer%20Success%20Manager.md) | Strategic customer success specialist for onboarding, health scoring, QBR facilitation, churn prevention, expansion identification, and renewal… |
+| [♟️ Deal & Proposal Strategist](revenue/Deal%20%26%20Proposal%20Strategist.md) | Wins complex B2B deals end to end — qualifies and out-strategizes the opportunity (MEDDPICC, competitive positioning, Challenger commercial teaching,… |
+| [🏨 Hospitality Guest Services](revenue/Hospitality%20Guest%20Services.md) | Comprehensive hospitality guest services specialist for hotels, resorts, restaurants, and event venues — covering reservations, check-in/check-out,… |
+| [🧲 Offer & Lead Gen Strategist](revenue/Offer%20%26%20Lead%20Gen%20Strategist.md) | Top-of-funnel architect who designs irresistible offers and lead magnets that attract qualified buyers at scale. Specializes in value-equation offer… |
+| [🎯 Outbound Strategist](revenue/Outbound%20Strategist.md) | Signal-based outbound specialist who designs multi-channel prospecting sequences, defines ICPs, and builds pipeline through research-driven… |
+| [📊 Pipeline Analyst](revenue/Pipeline%20Analyst.md) | Revenue operations analyst specializing in pipeline health diagnostics, deal velocity analysis, forecast accuracy, and data-driven sales coaching.… |
+| [🛒 Retail Customer Returns](revenue/Retail%20Customer%20Returns.md) | Comprehensive retail customer returns specialist for processing returns, exchanges, and refunds across in-store, online, and omnichannel retail —… |
+| [🏋️ Sales Coach](revenue/Sales%20Coach.md) | Sales coaching specialist who makes every rep and every deal better — rep development, pipeline review facilitation, call coaching, forecast… |
+| [🛠️ Sales Engineer](revenue/Sales%20Engineer.md) | Senior pre-sales engineer specializing in technical discovery, demo engineering, POC scoping, competitive battlecards, and bridging product… |
+| [📊 Sales Reporting & Ops](revenue/Sales%20Reporting%20%26%20Ops.md) | Runs the sales-reporting pipeline end to end — ingests sales data from spreadsheets/sources, extracts and normalizes key metrics (MTD, YTD,… |
+| [☁️ Salesforce Architect](revenue/Salesforce%20Architect.md) | Solution architecture for Salesforce platform — multi-cloud design, integration patterns, governor limits, deployment strategy, and data model… |
+| [💬 Support Responder](revenue/Support%20Responder.md) | Expert customer support specialist delivering exceptional customer service, issue resolution, and user experience optimization. Specializes in… |
 
-Turning pipeline into revenue through craft, not CRM busywork.
+### 💰 Finance & Law
 
-| Agent | Specialty | When to Use |
-|-------|-----------|-------------|
-| 🎯 [Outbound Strategist](sales/sales-outbound-strategist.md) | Signal-based prospecting, multi-channel sequences, ICP targeting | Building pipeline through research-driven outreach, not volume |
-| 🔍 [Discovery Coach](sales/sales-discovery-coach.md) | SPIN, Gap Selling, Sandler — question design and call structure | Preparing for discovery calls, qualifying opportunities, coaching reps |
-| ♟️ [Deal Strategist](sales/sales-deal-strategist.md) | MEDDPICC qualification, competitive positioning, win planning | Scoring deals, exposing pipeline risk, building win strategies |
-| 🛠️ [Sales Engineer](sales/sales-engineer.md) | Technical demos, POC scoping, competitive battlecards | Pre-sales technical wins, demo prep, competitive positioning |
-| 🏹 [Proposal Strategist](sales/sales-proposal-strategist.md) | RFP response, win themes, narrative structure | Writing proposals that persuade, not just comply |
-| 📊 [Pipeline Analyst](sales/sales-pipeline-analyst.md) | Forecasting, pipeline health, deal velocity, RevOps | Pipeline reviews, forecast accuracy, revenue operations |
-| 🗺️ [Account Strategist](sales/sales-account-strategist.md) | Land-and-expand, QBRs, stakeholder mapping | Post-sale expansion, account planning, NRR growth |
-| 🏋️ [Sales Coach](sales/sales-coach.md) | Rep development, call coaching, pipeline review facilitation | Making every rep and every deal better through structured coaching |
-| 🎯 [Sales Outreach](specialized/sales-outreach.md) | Cold prospecting, multi-touch cadences, objection handling, proposals | Top-of-funnel B2B outreach — from cold email to booked discovery call |
-| 🧲 [Offer & Lead Gen Strategist](sales/sales-offer-lead-gen-strategist.md) | Offers & lead magnets | Top-of-funnel offer construction and lead gen |
+| Agent | What it does |
+|---|---|
+| [📊 Controller & FP&A](finance/Controller%20%26%20FP%26A.md) | The "run-the-money" finance agent for a small/lean operation — combines the controller's accurate books (day-to-day accounting, month-end close,… |
+| [📊 Financial Analyst](finance/Financial%20Analyst.md) | Expert financial analyst specializing in financial modeling, forecasting, scenario analysis, and data-driven decision support. Transforms raw… |
+| [📝 Grant Writer](finance/Grant%20Writer.md) | Business grant specialist for companies seeking non-dilutive funding — R&D, innovation, and government grants across the US (SBIR/STTR), EU (Horizon… |
+| [🔍 Investment Researcher](finance/Investment%20Researcher.md) | Expert investment researcher specializing in market research, due diligence, portfolio analysis, and asset valuation. Conducts rigorous fundamental… |
+| [⚖️ Israel Business Law Navigator](finance/Israel%20Business%20Law%20Navigator.md) | A planning and issue-spotting lens on Israeli business law for a founder running their own Israeli venture — entity & formation, contracts… |
+| [🇮🇱 Israel Tax Strategist](finance/Israel%20Tax%20Strategist.md) | Planning & strategy assistant for the Israeli tax system — income, corporate, VAT, capital gains, real estate (mas shevach/rechisha), equity comp… |
+| [⚖️ Legal Compliance Checker](finance/Legal%20Compliance%20Checker.md) | Expert legal and compliance specialist ensuring business operations, data handling, and content creation comply with relevant laws, regulations, and… |
+| [⚖️ Legal Document Review](finance/Legal%20Document%20Review.md) | Comprehensive legal document review specialist for contracts, litigation documents, and real estate agreements — summarizing documents, flagging risk… |
+| [🏦 Loan Officer Assistant](finance/Loan%20Officer%20Assistant.md) | Comprehensive loan officer assistant for mortgage and lending professionals — covering borrower intake, pre-qualification, document collection,… |
+| [💰 Pricing Analyst](finance/Pricing%20Analyst.md) | Specialized pricing analyst who develops optimal pricing models through market research, competitor analysis, cost structure evaluation, and margin… |
+| [🏠 Real Estate Buyer & Seller](finance/Real%20Estate%20Buyer%20%26%20Seller.md) | Comprehensive real estate agent assistant for buyer representation, seller representation, listing management, offer negotiation, transaction… |
+| [⚖️ US Business Law Navigator](finance/US%20Business%20Law%20Navigator.md) | A planning and issue-spotting lens on the US business-law landscape for a founder — entity & formation, contracts, IP, employment/contractors,… |
+| [🇺🇸 US Tax & Accounting Navigator](finance/US%20Tax%20%26%20Accounting%20Navigator.md) | A commercial-strategy lens on the US tax, accounting, and business-finance landscape — built for a finance/bizdev professional who is fluent in… |
 
-### 📢 Marketing Division
+### 🛠️ Operations & People
 
-Growing your audience, one authentic interaction at a time.
+| Agent | What it does |
+|---|---|
+| [📊 Analytics Reporter](operations/Analytics%20Reporter.md) | Expert data analyst transforming raw data into actionable business insights. Creates dashboards, performs statistical analysis, tracks KPIs, and… |
+| [🔄 Change Management Consultant](operations/Change%20Management%20Consultant.md) | Expert change management specialist using ADKAR, Kotter, and Prosci frameworks to guide organizations through technology implementations,… |
+| [📚 Corporate Training Designer](operations/Corporate%20Training%20Designer.md) | Expert in enterprise training system design and curriculum development — proficient in training needs analysis, instructional design methodology,… |
+| [📄 Document Generator](operations/Document%20Generator.md) | Expert document creation specialist who generates professional PDF, PPTX, DOCX, and XLSX files using code-based approaches with proper formatting,… |
+| [🗂️ Executive Assistant](operations/Executive%20Assistant.md) | The best digital executive assistant — owns your calendar, runs your inbox and communications (triage + drafting), tracks every task and follow-up so… |
+| [📝 Executive Summary Generator](operations/Executive%20Summary%20Generator.md) | Consultant-grade AI specialist trained to think and communicate like a senior strategy consultant. Transforms complex business inputs into concise,… |
+| [🤝 HR Onboarding](operations/HR%20Onboarding.md) | Comprehensive HR onboarding specialist for employee orientation, documentation management, compliance tracking, benefits enrollment, culture… |
+| [🌐 Language Translator](operations/Language%20Translator.md) | Translation specialist across English, Hebrew, and French — all six directions (EN↔HE, EN↔FR, HE↔FR) — transferring meaning rather than words, with… |
+| [📋 Meeting Notes Specialist](operations/Meeting%20Notes%20Specialist.md) | Extract structured decisions, action items, and open questions from meeting transcripts or rough notes into a clean 4-section summary. |
+| [🎛️ Operations & Program Manager](operations/Operations%20%26%20Program%20Manager.md) | Runs the operation across multiple projects — strategic portfolio orchestration (resource allocation, prioritization, ROI across initiatives) plus… |
+| [🌱 Personal Growth Mentor](operations/Personal%20Growth%20Mentor.md) | Cross-domain personal development mentor for goal clarity, habit design, strategic decisions, and accountability without motivational fluff. |
+| [🗂️ Project Manager](operations/Project%20Manager.md) | Delivers a single project end to end — converts specs into realistic, developer-ready task lists (no gold-plating), then coordinates cross-functional… |
 
-| Agent | Specialty | When to Use |
-|-------|-----------|-------------|
-| 🚀 [Growth Hacker](marketing/marketing-growth-hacker.md) | Rapid user acquisition, viral loops, experiments | Explosive growth, user acquisition, conversion optimization |
-| 📝 [Content Creator](marketing/marketing-content-creator.md) | Multi-platform content, editorial calendars | Content strategy, copywriting, brand storytelling |
-| 🐦 [Twitter Engager](marketing/marketing-twitter-engager.md) | Real-time engagement, thought leadership | Twitter strategy, LinkedIn campaigns, professional social |
-| 🛰️ [X/Twitter Intelligence Analyst](marketing/marketing-x-twitter-intelligence-analyst.md) | Social listening, trend detection, account monitoring | Brand risk, competitor, and audience intelligence on X/Twitter |
-| 📱 [TikTok Strategist](marketing/marketing-tiktok-strategist.md) | Viral content, algorithm optimization | TikTok growth, viral content, Gen Z/Millennial audience |
-| 📸 [Instagram Curator](marketing/marketing-instagram-curator.md) | Visual storytelling, community building | Instagram strategy, aesthetic development, visual content |
-| 🤝 [Reddit Community Builder](marketing/marketing-reddit-community-builder.md) | Authentic engagement, value-driven content | Reddit strategy, community trust, authentic marketing |
-| 📱 [App Store Optimizer](marketing/marketing-app-store-optimizer.md) | ASO, conversion optimization, discoverability | App marketing, store optimization, app growth |
-| 🌐 [Social Media Strategist](marketing/marketing-social-media-strategist.md) | Cross-platform strategy, campaigns | Overall social strategy, multi-platform campaigns |
-| 📕 [Xiaohongshu Specialist](marketing/marketing-xiaohongshu-specialist.md) | Lifestyle content, trend-driven strategy | Xiaohongshu growth, aesthetic storytelling, Gen Z audience |
-| 💬 [WeChat Official Account Manager](marketing/marketing-wechat-official-account.md) | Subscriber engagement, content marketing | WeChat OA strategy, community building, conversion optimization |
-| 🧠 [Zhihu Strategist](marketing/marketing-zhihu-strategist.md) | Thought leadership, knowledge-driven engagement | Zhihu authority building, Q&A strategy, lead generation |
-| 🇨🇳 [Baidu SEO Specialist](marketing/marketing-baidu-seo-specialist.md) | Baidu optimization, China SEO, ICP compliance | Ranking in Baidu and reaching China's search market |
-| 🎬 [Bilibili Content Strategist](marketing/marketing-bilibili-content-strategist.md) | B站 algorithm, danmaku culture, UP主 growth | Building audiences on Bilibili with community-first content |
-| 🎠 [Carousel Growth Engine](marketing/marketing-carousel-growth-engine.md) | TikTok/Instagram carousels, autonomous publishing | Generating and publishing viral carousel content |
-| 💼 [LinkedIn Content Creator](marketing/marketing-linkedin-content-creator.md) | Personal branding, thought leadership, professional content | LinkedIn growth, professional audience building, B2B content |
-| 🛒 [China E-Commerce Operator](marketing/marketing-china-ecommerce-operator.md) | Taobao, Tmall, Pinduoduo, live commerce | Running multi-platform e-commerce in China |
-| 🎥 [Kuaishou Strategist](marketing/marketing-kuaishou-strategist.md) | Kuaishou, 老铁 community, grassroots growth | Building authentic audiences in lower-tier markets |
-| 🔍 [SEO Specialist](marketing/marketing-seo-specialist.md) | Technical SEO, content strategy, link building | Driving sustainable organic search growth |
-| 📘 [Book Co-Author](marketing/marketing-book-co-author.md) | Thought-leadership books, ghostwriting, publishing | Strategic book collaboration for founders and experts |
-| 🌏 [Cross-Border E-Commerce Specialist](marketing/marketing-cross-border-ecommerce.md) | Amazon, Shopee, Lazada, cross-border fulfillment | Full-funnel cross-border e-commerce strategy |
-| 🎵 [Douyin Strategist](marketing/marketing-douyin-strategist.md) | Douyin platform, short-video marketing, algorithm | Growing audiences on China's leading short-video platform |
-| 🎙️ [Livestream Commerce Coach](marketing/marketing-livestream-commerce-coach.md) | Host training, live room optimization, conversion | Building high-performing livestream e-commerce operations |
-| 🎧 [Podcast Strategist](marketing/marketing-podcast-strategist.md) | Podcast content strategy, platform optimization | Chinese podcast market strategy and operations |
-| 🔒 [Private Domain Operator](marketing/marketing-private-domain-operator.md) | WeCom, private traffic, community operations | Building enterprise WeChat private domain ecosystems |
-| 🎬 [Short-Video Editing Coach](marketing/marketing-short-video-editing-coach.md) | Post-production, editing workflows, platform specs | Hands-on short-video editing training and optimization |
-| 🔥 [Weibo Strategist](marketing/marketing-weibo-strategist.md) | Sina Weibo, trending topics, fan engagement | Full-spectrum Weibo operations and growth |
-| 🎙️ [Global Podcast Strategist](marketing/marketing-global-podcast-strategist.md) | Show positioning, audience growth, monetisation | Podcast launch, platform algorithms, sponsorship, community building |
-| 🔮 [AI Citation Strategist](marketing/marketing-ai-citation-strategist.md) | AEO/GEO, AI recommendation visibility, citation auditing | Improving brand visibility across ChatGPT, Claude, Gemini, Perplexity |
-| 🇨🇳 [China Market Localization Strategist](marketing/marketing-china-market-localization-strategist.md) | Full-stack China market localization, Douyin/Xiaohongshu/WeChat GTM | Turning trend signals into executable China go-to-market strategies |
-| 🎬 [Video Optimization Specialist](marketing/marketing-video-optimization-specialist.md) | YouTube algorithm strategy, chaptering, thumbnail concepts | YouTube channel growth, video SEO, audience retention optimization |
-| 🏗️ [AEO Foundations Architect](marketing/marketing-aeo-foundations.md) | AI Engine Optimization infrastructure | llms.txt, AI-aware robots.txt, agent discovery files |
-| 🤖 [Agentic Search Optimizer](marketing/marketing-agentic-search-optimizer.md) | WebMCP & agentic task completion | Making sites usable by AI browsing agents |
-| 📧 [Email Marketing Strategist](marketing/marketing-email-strategist.md) | Lifecycle email & deliverability | CRM campaigns, automation, segmentation |
-| 📡 [Multi-Platform Publisher](marketing/marketing-multi-platform-publisher.md) | One-click Chinese multi-platform publishing | Routing one article to 知乎/小红书/CSDN/B站/公众号/掘金 |
-| 📣 [PR & Communications Manager](marketing/marketing-pr-communications-manager.md) | PR, media relations & crisis comms | Press releases, thought leadership, reputation |
+### 🧠 Strategy & Advisory
 
-### 📊 Product Division
+| Agent | What it does |
+|---|---|
+| [♟️ Business Strategist](advisory/Business%20Strategist.md) | Senior management consulting specialist for competitive analysis, market entry strategy, business model design, growth planning, organizational… |
+| [🌍 Cultural Intelligence Strategist](advisory/Cultural%20Intelligence%20Strategist.md) | Cultural intelligence (CQ) specialist for product, brand, and market. Two complementary jobs — (1) detect invisible exclusion and ensure software,… |
+| [🇫🇷 French Consulting Market Navigator](advisory/French%20Consulting%20Market%20Navigator.md) | Navigate the French ESN/SI freelance ecosystem — margin models, platform mechanics (Malt, collective.work), portage salarial, rate positioning, and… |
+| [🗺️ Geographer](advisory/Geographer.md) | PhD-level economic & spatial geographer as a business consultant — applies central-place theory, world-systems, geopolitics, urban geography, and… |
+| [📚 Historian](advisory/Historian.md) | PhD-level business & economic historian as a consultant — applies historiographic rigor, market-cycle analysis, comparative and counterfactual… |
+| [📜 Narratologist](advisory/Narratologist.md) | PhD-level narrative theorist as a business consultant — applies story-structure frameworks (Propp, Campbell/Vogler, three-act, kishōtenketsu,… |
+| [🧠 Psychologist](advisory/Psychologist.md) | PhD-level behavioral & consumer psychologist as a consultant — applies personality theory (Big Five), attachment, cognitive biases (CBT/behavioral… |
+| [🔗 Supply Chain Strategist](advisory/Supply%20Chain%20Strategist.md) | Expert supply chain management and procurement strategy specialist — skilled in supplier development, strategic sourcing, quality control, and supply… |
 
-Building the right thing at the right time.
-
-| Agent | Specialty | When to Use |
-|-------|-----------|-------------|
-| 🎯 [Sprint Prioritizer](product/product-sprint-prioritizer.md) | Agile planning, feature prioritization | Sprint planning, resource allocation, backlog management |
-| 🔍 [Trend Researcher](product/product-trend-researcher.md) | Market intelligence, competitive analysis | Market research, opportunity assessment, trend identification |
-| 💬 [Feedback Synthesizer](product/product-feedback-synthesizer.md) | User feedback analysis, insights extraction | Feedback analysis, user insights, product priorities |
-| 🧠 [Behavioral Nudge Engine](product/product-behavioral-nudge-engine.md) | Behavioral psychology, nudge design, engagement | Maximizing user motivation through behavioral science |
-| 🧭 [Product Manager](product/product-manager.md) | Full lifecycle product ownership | Discovery, PRDs, roadmap planning, GTM, outcome measurement |
-
-### 🎬 Project Management Division
-
-Keeping the trains running on time (and under budget).
-
-| Agent | Specialty | When to Use |
-|-------|-----------|-------------|
-| 🎬 [Studio Producer](project-management/project-management-studio-producer.md) | High-level orchestration, portfolio management | Multi-project oversight, strategic alignment, resource allocation |
-| 🐑 [Project Shepherd](project-management/project-management-project-shepherd.md) | Cross-functional coordination, timeline management | End-to-end project coordination, stakeholder management |
-| ⚙️ [Studio Operations](project-management/project-management-studio-operations.md) | Day-to-day efficiency, process optimization | Operational excellence, team support, productivity |
-| 🧪 [Experiment Tracker](project-management/project-management-experiment-tracker.md) | A/B tests, hypothesis validation | Experiment management, data-driven decisions, testing |
-| 👔 [Senior Project Manager](project-management/project-manager-senior.md) | Realistic scoping, task conversion | Converting specs to tasks, scope management |
-| 📋 [Jira Workflow Steward](project-management/project-management-jira-workflow-steward.md) | Git workflow, branch strategy, traceability | Enforcing Jira-linked Git discipline and delivery |
-| 📋 [Meeting Notes Specialist](project-management/project-management-meeting-notes-specialist.md) | Structured meeting summaries | Extracting decisions, action items, open questions |
-
-### 🧪 Testing Division
-
-Breaking things so users don't have to.
-
-| Agent | Specialty | When to Use |
-|-------|-----------|-------------|
-| 📸 [Evidence Collector](testing/testing-evidence-collector.md) | Screenshot-based QA, visual proof | UI testing, visual verification, bug documentation |
-| 🔍 [Reality Checker](testing/testing-reality-checker.md) | Evidence-based certification, quality gates | Production readiness, quality approval, release certification |
-| 📊 [Test Results Analyzer](testing/testing-test-results-analyzer.md) | Test evaluation, metrics analysis | Test output analysis, quality insights, coverage reporting |
-| ⚡ [Performance Benchmarker](testing/testing-performance-benchmarker.md) | Performance testing, optimization | Speed testing, load testing, performance tuning |
-| 🔌 [API Tester](testing/testing-api-tester.md) | API validation, integration testing | API testing, endpoint verification, integration QA |
-| 🛠️ [Tool Evaluator](testing/testing-tool-evaluator.md) | Technology assessment, tool selection | Evaluating tools, software recommendations, tech decisions |
-| 🔄 [Workflow Optimizer](testing/testing-workflow-optimizer.md) | Process analysis, workflow improvement | Process optimization, efficiency gains, automation opportunities |
-| ♿ [Accessibility Auditor](testing/testing-accessibility-auditor.md) | WCAG auditing, assistive technology testing | Accessibility compliance, screen reader testing, inclusive design verification |
-
-### 🛟 Support Division
-
-The backbone of the operation.
-
-| Agent | Specialty | When to Use |
-|-------|-----------|-------------|
-| 💬 [Support Responder](support/support-support-responder.md) | Customer service, issue resolution | Customer support, user experience, support operations |
-| 📊 [Analytics Reporter](support/support-analytics-reporter.md) | Data analysis, dashboards, insights | Business intelligence, KPI tracking, data visualization |
-| 💰 [Finance Tracker](support/support-finance-tracker.md) | Financial planning, budget management | Financial analysis, cash flow, business performance |
-| 🏗️ [Infrastructure Maintainer](support/support-infrastructure-maintainer.md) | System reliability, performance optimization | Infrastructure management, system operations, monitoring |
-| ⚖️ [Legal Compliance Checker](support/support-legal-compliance-checker.md) | Compliance, regulations, legal review | Legal compliance, regulatory requirements, risk management |
-| 📑 [Executive Summary Generator](support/support-executive-summary-generator.md) | C-suite communication, strategic summaries | Executive reporting, strategic communication, decision support |
-
-### 🥽 Spatial Computing Division
-
-Building the immersive future.
-
-| Agent | Specialty | When to Use |
-|-------|-----------|-------------|
-| 🏗️ [XR Interface Architect](spatial-computing/xr-interface-architect.md) | Spatial interaction design, immersive UX | AR/VR/XR interface design, spatial computing UX |
-| 💻 [macOS Spatial/Metal Engineer](spatial-computing/macos-spatial-metal-engineer.md) | Swift, Metal, high-performance 3D | macOS spatial computing, Vision Pro native apps |
-| 🌐 [XR Immersive Developer](spatial-computing/xr-immersive-developer.md) | WebXR, browser-based AR/VR | Browser-based immersive experiences, WebXR apps |
-| 🎮 [XR Cockpit Interaction Specialist](spatial-computing/xr-cockpit-interaction-specialist.md) | Cockpit-based controls, immersive systems | Cockpit control systems, immersive control interfaces |
-| 🍎 [visionOS Spatial Engineer](spatial-computing/visionos-spatial-engineer.md) | Apple Vision Pro development | Vision Pro apps, spatial computing experiences |
-| 🔌 [Terminal Integration Specialist](spatial-computing/terminal-integration-specialist.md) | Terminal integration, command-line tools | CLI tools, terminal workflows, developer tools |
-
-### 🎯 Specialized Division
-
-The unique specialists who don't fit in a box.
-
-| Agent | Specialty | When to Use |
-|-------|-----------|-------------|
-| 🎭 [Agents Orchestrator](specialized/agents-orchestrator.md) | Multi-agent coordination, workflow management | Complex projects requiring multiple agent coordination |
-| 🔍 [LSP/Index Engineer](specialized/lsp-index-engineer.md) | Language Server Protocol, code intelligence | Code intelligence systems, LSP implementation, semantic indexing |
-| 📥 [Sales Data Extraction Agent](specialized/sales-data-extraction-agent.md) | Excel monitoring, sales metric extraction | Sales data ingestion, MTD/YTD/Year End metrics |
-| 📈 [Data Consolidation Agent](specialized/data-consolidation-agent.md) | Sales data aggregation, dashboard reports | Territory summaries, rep performance, pipeline snapshots |
-| 📬 [Report Distribution Agent](specialized/report-distribution-agent.md) | Automated report delivery | Territory-based report distribution, scheduled sends |
-| 🔐 [Agentic Identity & Trust Architect](specialized/agentic-identity-trust.md) | Agent identity, authentication, trust verification | Multi-agent identity systems, agent authorization, audit trails |
-| 🔗 [Identity Graph Operator](specialized/identity-graph-operator.md) | Shared identity resolution for multi-agent systems | Entity deduplication, merge proposals, cross-agent identity consistency |
-| 💸 [Accounts Payable Agent](specialized/accounts-payable-agent.md) | Payment processing, vendor management, audit | Autonomous payment execution across crypto, fiat, stablecoins |
-| 🛡️ [Blockchain Security Auditor](specialized/blockchain-security-auditor.md) | Smart contract audits, exploit analysis | Finding vulnerabilities in contracts before deployment |
-| 📋 [Compliance Auditor](specialized/compliance-auditor.md) | SOC 2, ISO 27001, HIPAA, PCI-DSS | Guiding organizations through compliance certification |
-| 🌍 [Cultural Intelligence Strategist](specialized/specialized-cultural-intelligence-strategist.md) | Global UX, representation, cultural exclusion | Ensuring software resonates across cultures |
-| 🗣️ [Developer Advocate](specialized/specialized-developer-advocate.md) | Community building, DX, developer content | Bridging product and developer community |
-| 🔬 [Model QA Specialist](specialized/specialized-model-qa.md) | ML audits, feature analysis, interpretability | End-to-end QA for machine learning models |
-| 🗃️ [ZK Steward](specialized/zk-steward.md) | Knowledge management, Zettelkasten, notes | Building connected, validated knowledge bases |
-| 🔌 [MCP Builder](specialized/specialized-mcp-builder.md) | Model Context Protocol servers, AI agent tooling | Building MCP servers that extend AI agent capabilities |
-| 📄 [Document Generator](specialized/specialized-document-generator.md) | PDF, PPTX, DOCX, XLSX generation from code | Professional document creation, reports, data visualization |
-| ⚙️ [Automation Governance Architect](specialized/automation-governance-architect.md) | Automation governance, n8n, workflow auditing | Evaluating and governing business automations at scale |
-| 📚 [Corporate Training Designer](specialized/corporate-training-designer.md) | Enterprise training, curriculum development | Designing training systems and learning programs |
-| 🌱 [Personal Growth Mentor](specialized/personal-growth-mentor.md) | Goal clarity, habit systems, accountability, life strategy | Cross-domain personal development without motivational fluff |
-| 🏛️ [Government Digital Presales Consultant](specialized/government-digital-presales-consultant.md) | China ToG presales, digital transformation | Government digital transformation proposals and bids |
-| ⚕️ [Healthcare Marketing Compliance](specialized/healthcare-marketing-compliance.md) | China healthcare advertising compliance | Healthcare marketing regulatory compliance |
-| 🎯 [Recruitment Specialist](specialized/recruitment-specialist.md) | Talent acquisition, recruiting operations | Recruitment strategy, sourcing, and hiring processes |
-| 🎓 [Study Abroad Advisor](specialized/study-abroad-advisor.md) | International education, application planning | Study abroad planning across US, UK, Canada, Australia |
-| 🔗 [Supply Chain Strategist](specialized/supply-chain-strategist.md) | Supply chain management, procurement strategy | Supply chain optimization and procurement planning |
-| 🗺️ [Workflow Architect](specialized/specialized-workflow-architect.md) | Workflow discovery, mapping, and specification | Mapping every path through a system before code is written |
-| ☁️ [Salesforce Architect](specialized/specialized-salesforce-architect.md) | Multi-cloud Salesforce design, governor limits, integrations | Enterprise Salesforce architecture, org strategy, deployment pipelines |
-| 🇫🇷 [French Consulting Market Navigator](specialized/specialized-french-consulting-market.md) | ESN/SI ecosystem, portage salarial, rate positioning | Freelance consulting in the French IT market |
-| 🇰🇷 [Korean Business Navigator](specialized/specialized-korean-business-navigator.md) | Korean business culture, 품의 process, relationship mechanics | Foreign professionals navigating Korean business relationships |
-| 🏗️ [Civil Engineer](specialized/specialized-civil-engineer.md) | Structural analysis, geotechnical design, global building codes | Multi-standard structural engineering across Eurocode, ACI, AISC, and more |
-| 🎧 [Customer Service](specialized/customer-service.md) | Omnichannel support, complaint handling, retention, escalation | Any industry customer support — retail, SaaS, hospitality, finance, logistics |
-| 🏥 [Healthcare Customer Service](specialized/healthcare-customer-service.md) | HIPAA-aware patient support, billing, insurance, emergency routing | Healthcare organizations needing compliant, empathetic patient support |
-| 🏨 [Hospitality Guest Services](specialized/hospitality-guest-services.md) | Reservations, concierge, complaint recovery, loyalty, events | Hotels, resorts, restaurants, and event venues |
-| 🤝 [HR Onboarding](specialized/hr-onboarding.md) | Pre-boarding, compliance, benefits enrollment, 30-60-90 day plans | Any company onboarding new hires — from startups to enterprise |
-| 🌐 [Language Translator](specialized/language-translator.md) | Spanish ↔ English translation, dialect awareness, cultural context | Travel, business, medical, and legal translation needs |
-| ⏱️ [Legal Billing & Time Tracking](specialized/legal-billing-time-tracking.md) | Time capture, billing narratives, IOLTA compliance, collections | Law firms maximizing revenue recovery and billing accuracy |
-| 📋 [Legal Client Intake](specialized/legal-client-intake.md) | Prospect qualification, conflict screening, consultation scheduling | Law firms converting inquiries into retained clients |
-| ⚖️ [Legal Document Review](specialized/legal-document-review.md) | Contract review, risk flagging, version comparison, compliance | Attorney-ready first-pass review across any practice area |
-| 🏦 [Loan Officer Assistant](specialized/loan-officer-assistant.md) | Borrower intake, TRID compliance, pipeline tracking, closing coordination | Mortgage and consumer lending teams |
-| 🏠 [Real Estate Buyer & Seller](specialized/real-estate-buyer-seller.md) | Buyer/seller representation, offers, transaction coordination | Residential and investment real estate transactions |
-| 🛒 [Retail Customer Returns](specialized/retail-customer-returns.md) | Return processing, fraud prevention, exchanges, vendor returns | Brick-and-mortar, e-commerce, and omnichannel retail |
-| ♟️ [Business Strategist](specialized/business-strategist.md) | Management-consulting strategy | Competitive analysis, market entry, growth planning |
-| 🔄 [Change Management Consultant](specialized/change-management-consultant.md) | ADKAR/Kotter/Prosci change | Guiding orgs through transformation & adoption |
-| 🧭 [Chief of Staff](specialized/specialized-chief-of-staff.md) | Executive coordination | Filtering noise, owning processes, routing decisions |
-| 🌟 [Customer Success Manager](specialized/customer-success-manager.md) | Onboarding, health & retention | QBRs, churn prevention, renewals & expansion |
-| 📝 [Grant Writer](specialized/grant-writer.md) | Grant proposals & funding | LOIs, proposals, budgets for nonprofits/research |
-| 🏥 [Medical Billing & Coding Specialist](specialized/medical-billing-coding-specialist.md) | ICD-10/CPT/HCPCS & revenue cycle | Claims, denial management, RCM optimization |
-| 💰 [Pricing Analyst](specialized/specialized-pricing-analyst.md) | Pricing models & margin optimization | Competitor/cost analysis, value-based pricing |
-
-### 💵 Finance Division
-
-Accounting, financial analysis, tax strategy, and investment research specialists.
-
-| Agent | Specialty | When to Use |
-|-------|-----------|-------------|
-| 📒 [Bookkeeper & Controller](finance/finance-bookkeeper-controller.md) | Month-end close, reconciliation, GAAP compliance, internal controls | Day-to-day accounting operations, audit readiness, financial record-keeping |
-| 📊 [Financial Analyst](finance/finance-financial-analyst.md) | Financial modeling, forecasting, scenario analysis, decision support | Three-statement models, variance analysis, data-driven business intelligence |
-| 📈 [FP&A Analyst](finance/finance-fpa-analyst.md) | Budgeting, rolling forecasts, variance analysis, business reviews | Annual operating plans, monthly business reviews, strategic resource allocation |
-| 🔍 [Investment Researcher](finance/finance-investment-researcher.md) | Due diligence, portfolio analysis, asset valuation, equity research | Investment thesis development, risk assessment, market research |
-| 🏛️ [Tax Strategist](finance/finance-tax-strategist.md) | Tax optimization, multi-jurisdictional compliance, transfer pricing | Entity structuring, ETR analysis, audit defense, strategic tax planning |
-
-### 🎮 Game Development Division
-
-Building worlds, systems, and experiences across every major engine.
-
-#### Cross-Engine Agents (Engine-Agnostic)
-
-| Agent | Specialty | When to Use |
-|-------|-----------|-------------|
-| 🎯 [Game Designer](game-development/game-designer.md) | Systems design, GDD authorship, economy balancing, gameplay loops | Designing game mechanics, progression systems, writing design documents |
-| 🗺️ [Level Designer](game-development/level-designer.md) | Layout theory, pacing, encounter design, environmental storytelling | Building levels, designing encounter flow, spatial narrative |
-| 🎨 [Technical Artist](game-development/technical-artist.md) | Shaders, VFX, LOD pipeline, art-to-engine optimization | Bridging art and engineering, shader authoring, performance-safe asset pipelines |
-| 🔊 [Game Audio Engineer](game-development/game-audio-engineer.md) | FMOD/Wwise, adaptive music, spatial audio, audio budgets | Interactive audio systems, dynamic music, audio performance |
-| 📖 [Narrative Designer](game-development/narrative-designer.md) | Story systems, branching dialogue, lore architecture | Writing branching narratives, implementing dialogue systems, world lore |
-
-#### Unity
-
-| Agent | Specialty | When to Use |
-|-------|-----------|-------------|
-| 🏗️ [Unity Architect](game-development/unity/unity-architect.md) | ScriptableObjects, data-driven modularity, DOTS/ECS | Large-scale Unity projects, data-driven system design, ECS performance work |
-| ✨ [Unity Shader Graph Artist](game-development/unity/unity-shader-graph-artist.md) | Shader Graph, HLSL, URP/HDRP, Renderer Features | Custom Unity materials, VFX shaders, post-processing passes |
-| 🌐 [Unity Multiplayer Engineer](game-development/unity/unity-multiplayer-engineer.md) | Netcode for GameObjects, Unity Relay/Lobby, server authority, prediction | Online Unity games, client prediction, Unity Gaming Services integration |
-| 🛠️ [Unity Editor Tool Developer](game-development/unity/unity-editor-tool-developer.md) | EditorWindows, AssetPostprocessors, PropertyDrawers, build validation | Custom Unity Editor tooling, pipeline automation, content validation |
-
-#### Unreal Engine
-
-| Agent | Specialty | When to Use |
-|-------|-----------|-------------|
-| ⚙️ [Unreal Systems Engineer](game-development/unreal-engine/unreal-systems-engineer.md) | C++/Blueprint hybrid, GAS, Nanite constraints, memory management | Complex Unreal gameplay systems, Gameplay Ability System, engine-level C++ |
-| 🎨 [Unreal Technical Artist](game-development/unreal-engine/unreal-technical-artist.md) | Material Editor, Niagara, PCG, Substrate | Unreal materials, Niagara VFX, procedural content generation |
-| 🌐 [Unreal Multiplayer Architect](game-development/unreal-engine/unreal-multiplayer-architect.md) | Actor replication, GameMode/GameState hierarchy, dedicated server | Unreal online games, replication graphs, server authoritative Unreal |
-| 🗺️ [Unreal World Builder](game-development/unreal-engine/unreal-world-builder.md) | World Partition, Landscape, HLOD, LWC | Large open-world Unreal levels, streaming systems, terrain at scale |
-
-#### Godot
-
-| Agent | Specialty | When to Use |
-|-------|-----------|-------------|
-| 📜 [Godot Gameplay Scripter](game-development/godot/godot-gameplay-scripter.md) | GDScript 2.0, signals, composition, static typing | Godot gameplay systems, scene composition, performance-conscious GDScript |
-| 🌐 [Godot Multiplayer Engineer](game-development/godot/godot-multiplayer-engineer.md) | MultiplayerAPI, ENet/WebRTC, RPCs, authority model | Online Godot games, scene replication, server-authoritative Godot |
-| ✨ [Godot Shader Developer](game-development/godot/godot-shader-developer.md) | Godot shading language, VisualShader, RenderingDevice | Custom Godot materials, 2D/3D effects, post-processing, compute shaders |
-
-#### Blender
-
-| Agent | Specialty | When to Use |
-|-------|-----------|-------------|
-| 🧩 [Blender Addon Engineer](game-development/blender/blender-addon-engineer.md) | Blender Python (`bpy`), custom operators/panels, asset validators, exporters, pipeline automation | Building Blender add-ons, asset prep tools, export workflows, and DCC pipeline automation |
-
-#### Roblox Studio
-
-| Agent | Specialty | When to Use |
-|-------|-----------|-------------|
-| ⚙️ [Roblox Systems Scripter](game-development/roblox-studio/roblox-systems-scripter.md) | Luau, RemoteEvents/Functions, DataStore, server-authoritative module architecture | Building secure Roblox game systems, client-server communication, data persistence |
-| 🎯 [Roblox Experience Designer](game-development/roblox-studio/roblox-experience-designer.md) | Engagement loops, monetization, D1/D7 retention, onboarding flow | Designing Roblox game loops, Game Passes, daily rewards, player retention |
-| 👗 [Roblox Avatar Creator](game-development/roblox-studio/roblox-avatar-creator.md) | UGC pipeline, accessory rigging, Creator Marketplace submission | Roblox UGC items, HumanoidDescription customization, in-experience avatar shops |
-
-### 📚 Academic Division
-
-Scholarly rigor for world-building, storytelling, and narrative design.
-
-| Agent | Specialty | When to Use |
-|-------|-----------|-------------|
-| 🌍 [Anthropologist](academic/academic-anthropologist.md) | Cultural systems, kinship, rituals, belief systems | Designing culturally coherent societies with internal logic |
-| 🌐 [Geographer](academic/academic-geographer.md) | Physical/human geography, climate, cartography | Building geographically coherent worlds with realistic terrain and settlements |
-| 📚 [Historian](academic/academic-historian.md) | Historical analysis, periodization, material culture | Validating historical coherence, enriching settings with authentic period detail |
-| 📜 [Narratologist](academic/academic-narratologist.md) | Narrative theory, story structure, character arcs | Analyzing and improving story structure with established theoretical frameworks |
-| 🧠 [Psychologist](academic/academic-psychologist.md) | Personality theory, motivation, cognitive patterns | Building psychologically credible characters grounded in research |
-
----
+> **106 agents across 8 divisions.** Activate any agent by name in your AI tool of choice.
 
 ## 🎯 Real-World Use Cases
 
@@ -414,7 +232,7 @@ Scholarly rigor for world-building, storytelling, and narrative design.
 2. 🏗️ **Backend Architect** - Design the API and database
 3. 🚀 **Growth Hacker** - Plan user acquisition
 4. ⚡ **Rapid Prototyper** - Fast iteration cycles
-5. 🔍 **Reality Checker** - Ensure quality before launch
+5. 🧐 **QA Reality Checker** - Ensure quality before launch
 
 **Result**: Ship faster with specialized expertise at every stage.
 
@@ -436,12 +254,12 @@ Scholarly rigor for world-building, storytelling, and narrative design.
 ### Scenario 3: Enterprise Feature Development
 
 **Your Team**:
-1. 👔 **Senior Project Manager** - Scope and task planning
-2. 💎 **Senior Developer** - Complex implementation
+1. 👔 **Project Manager** - Scope and task planning
+2. 🏛️ **Software Architect** - Complex implementation
 3. 🎨 **UI Designer** - Design system and components
-4. 🧪 **Experiment Tracker** - A/B test planning
-5. 📸 **Evidence Collector** - Quality verification
-6. 🔍 **Reality Checker** - Production readiness
+4. 🚀 **Growth Hacker** - A/B test planning
+5. 🧪 **QA Engineer** - Quality verification
+6. 🧐 **QA Reality Checker** - Production readiness
 
 **Result**: Enterprise-grade delivery with quality gates and documentation.
 
@@ -453,10 +271,9 @@ Scholarly rigor for world-building, storytelling, and narrative design.
 
 1. 📋 **Paid Media Auditor** - Comprehensive account assessment
 2. 📡 **Tracking & Measurement Specialist** - Verify conversion tracking accuracy
-3. 💰 **PPC Campaign Strategist** - Redesign account architecture
-4. 🔍 **Search Query Analyst** - Clean up wasted spend from search terms
-5. ✍️ **Ad Creative Strategist** - Refresh all ad copy and extensions
-6. 📊 **Analytics Reporter** (Support Division) - Build reporting dashboards
+3. 💰 **PPC Campaign Strategist** - Redesign account architecture and clean up wasted spend
+4. ✍️ **Ad Creative Strategist** - Refresh all ad copy and extensions
+5. 📊 **Analytics Reporter** (Operations & People) - Build reporting dashboards
 
 **Result**: Systematic account takeover with tracking verified, waste eliminated, structure optimized, and creative refreshed — all within the first 30 days.
 
@@ -466,7 +283,7 @@ Scholarly rigor for world-building, storytelling, and narrative design.
 
 **Your Team**: All 8 divisions working in parallel on a single mission.
 
-See the **[Nexus Spatial Discovery Exercise](examples/nexus-spatial-discovery.md)** -- a complete example where 8 agents (Product Trend Researcher, Backend Architect, Brand Guardian, Growth Hacker, Support Responder, UX Researcher, Project Shepherd, and XR Interface Architect) were deployed simultaneously to evaluate a software opportunity and produce a unified product plan covering market validation, technical architecture, brand strategy, go-to-market, support systems, UX research, project execution, and spatial UI design.
+A cross-functional team spanning all 8 divisions — for example **Product & Market Research, Backend Architect, Brand Guardian, Growth Hacker, Support Responder, UX Researcher, Operations & Program Manager, and Business Strategist** — deployed in parallel to evaluate a software opportunity and produce a unified product plan covering market validation, technical architecture, brand strategy, go-to-market, support systems, UX research, and execution.
 
 **Result**: Comprehensive, cross-functional product blueprint produced in a single session. [More examples](examples/).
 
@@ -535,25 +352,25 @@ Each agent is designed with:
 
 > "I don't just test your code - I default to finding 3-5 issues and require visual proof for everything."
 >
-> -- **Evidence Collector** (Testing Division)
+> -- **QA Reality Checker** (Engineering & AI Division)
 
 > "You're not marketing on Reddit - you're becoming a valued community member who happens to represent a brand."
 >
-> -- **Reddit Community Builder** (Marketing Division)
+> -- **Reddit Community Builder** (Marketing & Content Division)
 
 > "Every playful element must serve a functional or emotional purpose. Design delight that enhances rather than distracts."
 >
-> -- **Whimsy Injector** (Design Division)
+> -- **UI Designer** (Product & Design Division)
 
 > "Let me add a celebration animation that reduces task completion anxiety by 40%"
 >
-> -- **Whimsy Injector** (during a UX review)
+> -- **UI Designer** (during a UX review)
 
 ---
 
 ## 📊 Stats
 
-- 🎭 **203 Specialized Agents** across 14 divisions
+- 🎭 **106 specialized agents** across 8 divisions
 - 📝 **10,000+ lines** of personality, process, and code examples
 - ⏱️ **Months of iteration** from real-world usage
 - 🌟 **Battle-tested** in production environments
@@ -787,7 +604,7 @@ cd /your/project
 
 Reference agents in Windsurf's Cascade:
 ```
-Use the Reality Checker agent to verify this is production ready.
+Use the QA Reality Checker agent to verify this is production ready.
 ```
 
 See [integrations/windsurf/README.md](integrations/windsurf/README.md) for details.
@@ -935,7 +752,7 @@ MIT License - Use freely, commercially or personally. Attribution appreciated bu
 
 ## 🙏 Acknowledgments
 
-What started as a Reddit thread about AI agent specialization has grown into something remarkable — **203 agents across 14 divisions**, supported by a community of contributors from around the world. Every agent in this repo exists because someone cared enough to write it, test it, and share it.
+What started as a Reddit thread about AI agent specialization has grown into something remarkable — **106 agents across 8 divisions**, supported by a community of contributors from around the world. Every agent in this repo exists because someone cared enough to write it, test it, and share it.
 
 To everyone who has opened a PR, filed an issue, started a Discussion, or simply tried an agent and told us what worked — thank you. You're the reason The Agency keeps getting better.
 
