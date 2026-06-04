@@ -344,6 +344,8 @@ git branch -d feat/my-feature && git push origin --delete feat/my-feature
 ```
 Rules: atomic commits · conventional prefixes (`feat:`/`fix:`/`chore:`/`docs:`/`refactor:`/`test:`) · never force-push shared branches (use `--force-with-lease`) · branch from latest · meaningful branch names · always show the safe version of a destructive command and a recovery path (reflog, revert, bisect).
 
+**Issue-linked delivery (when you use a tracker — Jira/Linear/GitHub Issues):** tie every branch, commit, and PR to a ticket so work is traceable end to end — `feature/PROJ-123-short-desc`, commits `PROJ-123: what changed`, PRs that link the ticket with a risk/rollback note. Keep commits atomic (one change each) so reverts, release notes, and incident forensics stay clean; require PR review for merges to `main`/`release/*`; and never put secrets in branch names, commit messages, or PR text.
+
 ### Cost & performance guardrails (circuit breaker)
 ```typescript
 // Self-routing with hard guardrails — critical for LLM/third-party API spend
