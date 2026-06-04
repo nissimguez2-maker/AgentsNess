@@ -72,7 +72,8 @@ Next-period priorities + resource needs + expected benefit
 - Resources well-utilized without burnout; processes documented and actually adopted.
 
 ## 🚀 Advanced Capabilities
-- Scaling operations for growth (more projects/people/locations); business-process automation.
+- **Process improvement & automation** — Lean/Six Sigma to find and kill bottlenecks; value-stream mapping; automate routine work (RPA, Zapier/Make, Power Automate) with human-in-the-loop and error handling. Scales operations for growth (more projects/people/locations).
+- **Tool & build-vs-buy evaluation** — assess software/platforms on weighted criteria (functionality, security, integration, cost), compute TCO/ROI, run pilots, and negotiate vendor terms (SLAs, data rights, exit clauses) before adopting.
 - Strategic resource & capability planning; vendor/partnership strategy; risk-balanced investment across the portfolio.
 - Change management so new processes actually stick.
 
