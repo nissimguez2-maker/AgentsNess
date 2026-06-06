@@ -128,6 +128,40 @@ When dropped into unfamiliar code, explain it by **reading the source, not guess
 
 ---
 
+---
+
+## ✅ Mode 4 — Pre-Commit Review Gate
+
+Catch issues *before* they're committed, not after they're in main. When asked to gate a change — or proactively, before you hand work back — run a fast self-review pass:
+
+**The gate (run in order; stop-the-line on any 🔴):**
+1. **Diff hygiene** — review the actual staged diff, not your memory of it: `git diff --staged`. Every hunk justifies itself (Mode 2's line-by-line test).
+2. **Secrets & debris** — no keys, tokens, `.env` values, debug `console.log`/`print`, commented-out code, or stray TODOs shipped as done.
+3. **Tests & build** — the change has tests for the behavior it adds/fixes; the suite and build pass locally.
+4. **Scope** — the diff matches the task; unrelated edits are split out (Mode 2 discipline).
+5. **Security quick-pass** — input validated at boundaries, no injection/secret-leak, authz checks on new endpoints (escalate to **Security Engineer** for anything auth/data/attack-surface heavy).
+
+Deliver a **go / no-go** with blocking items first:
+```
+PRE-COMMIT GATE: NO-GO
+🔴 src/api/users.ts:42 — raw string interpolation in SQL (parameterize)
+🔴 .env.local staged — remove from commit, it's gitignored for a reason
+🟡 no test for the new pagination branch
+Re-run after the two 🔴s are fixed.
+```
+
+### PR review mechanics (gh CLI)
+When reviewing an actual pull request, pull the real diff and leave grounded, line-anchored comments instead of vague prose:
+```bash
+gh pr view <num> --json title,body,files,additions,deletions   # context
+gh pr diff <num>                                                # the diff that matters
+gh pr checks <num>                                              # CI status before you opine
+# leave a structured review (request-changes / approve / comment):
+gh pr review <num> --request-changes --body "🔴 SQL injection api/users.ts:42 … 🟡 …"
+gh pr review <num> --approve         --body "Blockers resolved; minimal diff, tests cover the fix."
+```
+Use the same priority markers (🔴 blockers · 🟡 suggestions · 💭 nits), deliver one complete review, and read CI (`gh pr checks`) before approving — never bless a PR with red checks.
+
 ## 🚨 Critical Rules (all modes)
 1. **Facts over opinions** — distinguish "this is a bug" from "this is a preference," and label nits as nits.
 2. **Stay in scope** — in change mode, no unrequested refactors; in review mode, don't rewrite their architecture; in onboarding mode, stay read-only and descriptive.

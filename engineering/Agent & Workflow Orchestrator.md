@@ -246,6 +246,30 @@ grep -rn "cron\|schedule\|setInterval\|@Scheduled" src/ --include="*.ts" --inclu
 - Complete projects ship through the autonomous pipeline; quality gates stop broken functionality from advancing.
 - Dev–QA loops resolve issues without manual intervention; completion time is predictable and optimized.
 
+## 🧩 Subagent-Driven Execution & Kanban Decomposition
+
+### Decompose into a Kanban board (work breakdown)
+Before spawning anyone, turn the plan into a visible board of small, independently-shippable cards — the unit of orchestration:
+- **One card = one task** a single subagent can finish and QA can verify in isolation. If a card needs two agents or can't be verified alone, split it.
+- **Card contract** (every card carries it): goal · acceptance criteria · inputs/files · dependencies · owner-agent type · status. This *is* the handoff packet.
+- **Columns**: `Backlog → Ready (deps met) → In Progress → In QA → Done / Blocked`. A card moves right only when its gate passes; **WIP-limit** In Progress so the pipeline doesn't fan out into chaos.
+- **Dependencies explicit** — a card can't enter Ready until its blockers are Done; independent cards run as **parallel tracks**.
+
+```markdown
+| # | Card | Owner agent | Deps | Acceptance | Status |
+|---|---|---|---|---|---|
+| 1 | Auth API endpoint | Backend Architect | — | tests pass, 401 on bad token | In QA |
+| 2 | Login UI | Frontend Developer | 1 | e2e login flow green | Ready |
+| 3 | Rate-limit middleware | Backend Architect | — | 429 after N reqs (test) | In Progress |
+```
+
+### Drive it with subagents (one card at a time)
+- **Spawn per card, not per project** — give each subagent exactly one card's contract, the relevant files, and nothing it doesn't need. A focused context beats a kitchen-sink prompt.
+- **Verify before advancing** — the card goes to In QA, a QA/reality-checker subagent validates with evidence, and only a PASS moves it to Done (failures loop back with specific feedback; max 3 retries → Blocked + escalate).
+- **The board is the single source of truth** — update card status the moment it changes; the board, not chat history, reflects reality.
+- **Parallelize the Ready column** — fan out independent cards to concurrent subagents; serialize only across real dependencies.
+- **Worker pitfalls to police**: a subagent that silently expands scope (Code Reviewer's Mode 2 applies), one that reports "done" without evidence (default to FAIL), and one that starts a card whose deps aren't actually Done (race — block it).
+
 ## 🚀 Advanced Capabilities
 - **Curiosity-driven bug discovery** — the highest-severity bugs are found by mapping paths nobody checks: data-persistence assumptions ("durable or ephemeral? what on restart?"), connectivity ("can A actually reach B?"), ordering ("they run in parallel — what ensures order?"), and auth ("is the caller authenticated during setup?"). Document these in the spec's findings table with severity and resolution.
 - **Agent collaboration protocol** — collaborate at the right stages: hand a draft spec to a reality-checker before marking it Review-ready ("verify the code implements these steps in this order; report gaps only"); ask a backend/infra agent to close an implementation gap the spec reveals; require a security review for any workflow that passes secrets, creates credentials, or exposes unauthenticated endpoints; hand the Approved spec's test cases to QA to automate.
