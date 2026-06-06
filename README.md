@@ -387,7 +387,9 @@ The Agency works natively with Claude Code, and ships conversion + install scrip
 
 ### Supported Tools
 
-- **[Claude Code](https://claude.ai/code)** — native `.md` agents, no conversion needed → `~/.claude/agents/`
+- **[Claude Code](https://claude.ai/code)** — native `.md` agents (subagents), no conversion needed → `~/.claude/agents/`
+- **Claude Skills** — one-pass `SKILL.md` skills → `~/.claude/skills/<slug>/`
+- **Hermes** — per-bot configs (`bot.yaml` + `system.md`) for deploying bots → `~/.hermes/bots/`
 - **[GitHub Copilot](https://github.com/copilot)** — native `.md` agents, no conversion needed → `~/.github/agents/` + `~/.copilot/agents/`
 - **[Antigravity](https://github.com/google-gemini/antigravity)** — `SKILL.md` per agent → `~/.gemini/antigravity/skills/`
 - **[Gemini CLI](https://github.com/google-gemini/gemini-cli)** — extension + `SKILL.md` files → `~/.gemini/extensions/agency-agents/`

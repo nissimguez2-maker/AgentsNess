@@ -10,18 +10,20 @@
 #   ./scripts/install.sh [--tool <name>] [--interactive] [--no-interactive] [--parallel] [--jobs N] [--help]
 #
 # Tools:
-#   claude-code  -- Copy agents to ~/.claude/agents/
-#   copilot      -- Copy agents to ~/.github/agents/ and ~/.copilot/agents/
-#   antigravity  -- Copy skills to ~/.gemini/antigravity/skills/
-#   gemini-cli   -- Install agents to ~/.gemini/agents/
-#   opencode     -- Copy agents to .opencode/agents/ in current directory
-#   cursor       -- Copy rules to .cursor/rules/ in current directory
-#   aider        -- Copy CONVENTIONS.md to current directory
-#   windsurf     -- Copy .windsurfrules to current directory
-#   openclaw     -- Copy workspaces to ~/.openclaw/agency-agents/
-#   qwen         -- Copy SubAgents to ~/.qwen/agents/ (user-wide) or .qwen/agents/ (project)
-#   codex        -- Copy custom agent TOML files to ~/.codex/agents/
-#   all          -- Install for all detected tools (default)
+#   claude-code   -- Copy agents to ~/.claude/agents/ (subagents Claude Code can delegate to)
+#   claude-skills -- Copy skills to ~/.claude/skills/<slug>/SKILL.md (one-pass prompts)
+#   copilot       -- Copy agents to ~/.github/agents/ and ~/.copilot/agents/
+#   antigravity   -- Copy skills to ~/.gemini/antigravity/skills/
+#   gemini-cli    -- Install agents to ~/.gemini/agents/
+#   opencode      -- Copy agents to .opencode/agents/ in current directory
+#   cursor        -- Copy rules to .cursor/rules/ in current directory
+#   aider         -- Copy CONVENTIONS.md to current directory
+#   windsurf      -- Copy .windsurfrules to current directory
+#   openclaw      -- Copy workspaces to ~/.openclaw/agency-agents/
+#   qwen          -- Copy SubAgents to ~/.qwen/agents/ (user-wide) or .qwen/agents/ (project)
+#   codex         -- Copy custom agent TOML files to ~/.codex/agents/
+#   hermes        -- Copy per-bot configs to ~/.hermes/bots/<slug>/ (deploy bots)
+#   all           -- Install for all detected tools (default)
 #
 # Flags:
 #   --tool <name>     Install only the specified tool
@@ -102,19 +104,18 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 INTEGRATIONS="$REPO_ROOT/integrations"
 
-ALL_TOOLS=(claude-code copilot antigravity gemini-cli opencode openclaw cursor aider windsurf qwen kimi codex)
+ALL_TOOLS=(claude-code claude-skills copilot antigravity gemini-cli opencode openclaw cursor aider windsurf qwen kimi codex hermes)
 
-# Standard agent category directories (keep sorted, sync with convert.sh / lint-agents.sh)
+# Standard agent category directories (keep in sync with convert.sh / lint-agents.sh)
 AGENT_DIRS=(
-  academic design engineering finance game-development marketing paid-media product project-management
-  sales spatial-computing specialized strategy support testing
+  advisory engineering finance growth marketing operations product revenue
 )
 
 # ---------------------------------------------------------------------------
 # Usage
 # ---------------------------------------------------------------------------
 usage() {
-  sed -n '3,32p' "$0" | sed 's/^# \{0,1\}//'
+  sed -n '3,34p' "$0" | sed 's/^# \{0,1\}//'
   exit 0
 }
 
@@ -151,10 +152,14 @@ detect_windsurf()     { command -v windsurf >/dev/null 2>&1 || [[ -d "${HOME}/.c
 detect_qwen()         { command -v qwen >/dev/null 2>&1 || [[ -d "${HOME}/.qwen" ]]; }
 detect_kimi()         { command -v kimi >/dev/null 2>&1; }
 detect_codex()        { command -v codex >/dev/null 2>&1 || [[ -d "${HOME}/.codex" ]]; }
+detect_claude_skills(){ [[ -d "${HOME}/.claude" ]]; }
+detect_hermes()       { command -v hermes >/dev/null 2>&1 || [[ -d "${HOME}/.hermes" ]]; }
 
 is_detected() {
   case "$1" in
     claude-code) detect_claude_code ;;
+    claude-skills) detect_claude_skills ;;
+    hermes)      detect_hermes      ;;
     copilot)     detect_copilot     ;;
     antigravity) detect_antigravity ;;
     gemini-cli)  detect_gemini_cli  ;;
@@ -174,6 +179,8 @@ is_detected() {
 tool_label() {
   case "$1" in
     claude-code) printf "%-14s  %s" "Claude Code"  "(claude.ai/code)"        ;;
+    claude-skills) printf "%-14s  %s" "Claude Skills" "(~/.claude/skills)"   ;;
+    hermes)      printf "%-14s  %s" "Hermes"       "(~/.hermes/bots)"        ;;
     copilot)     printf "%-14s  %s" "Copilot"      "(~/.github + ~/.copilot)" ;;
     antigravity) printf "%-14s  %s" "Antigravity"  "(~/.gemini/antigravity)" ;;
     gemini-cli)  printf "%-14s  %s" "Gemini CLI"   "(~/.gemini/agents)"      ;;
@@ -321,6 +328,43 @@ install_claude_code() {
     done < <(find "$REPO_ROOT/$dir" -name "*.md" -type f -print0)
   done
   ok "Claude Code: $count agents -> $dest"
+}
+
+install_claude_skills() {
+  local src="$INTEGRATIONS/claude-skills"
+  local dest="${HOME}/.claude/skills"
+  local count=0
+  [[ -d "$src" ]] || { err "integrations/claude-skills missing. Run ./scripts/convert.sh --tool claude-skills first."; return 1; }
+  mkdir -p "$dest"
+  local d
+  while IFS= read -r -d '' d; do
+    local name; name="$(basename "$d")"
+    [[ -f "$d/SKILL.md" ]] || continue
+    mkdir -p "$dest/$name"
+    cp "$d/SKILL.md" "$dest/$name/SKILL.md"
+    (( count++ )) || true
+  done < <(find "$src" -mindepth 1 -maxdepth 1 -type d -print0)
+  ok "Claude Skills: $count skills -> $dest"
+  dim "  Invoke one for a single-pass prompt; Claude auto-selects by description."
+}
+
+install_hermes() {
+  local src="$INTEGRATIONS/hermes"
+  local dest="${HERMES_BOTS_DIR:-${HOME}/.hermes/bots}"
+  local count=0
+  [[ -d "$src" ]] || { err "integrations/hermes missing. Run ./scripts/convert.sh --tool hermes first."; return 1; }
+  mkdir -p "$dest"
+  local d
+  while IFS= read -r -d '' d; do
+    local name; name="$(basename "$d")"
+    [[ -f "$d/bot.yaml" && -f "$d/system.md" ]] || continue
+    mkdir -p "$dest/$name"
+    cp "$d/bot.yaml" "$dest/$name/bot.yaml"
+    cp "$d/system.md" "$dest/$name/system.md"
+    (( count++ )) || true
+  done < <(find "$src" -mindepth 1 -maxdepth 1 -type d -print0)
+  ok "Hermes: $count bots -> $dest"
+  warn "Hermes: set HERMES_BOTS_DIR if your bots live elsewhere; reload the gateway to deploy them."
 }
 
 install_copilot() {
@@ -532,6 +576,8 @@ install_codex() {
 install_tool() {
   case "$1" in
     claude-code) install_claude_code ;;
+    claude-skills) install_claude_skills ;;
+    hermes)      install_hermes      ;;
     copilot)     install_copilot     ;;
     antigravity) install_antigravity ;;
     gemini-cli)  install_gemini_cli  ;;
