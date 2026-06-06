@@ -2,7 +2,7 @@
 
 NEXUS turns this library's specialists into a **coordinated pipeline** instead of agents you activate one at a time and hope work together. It defines who does what, when they hand off, and how quality is verified at each step — scaled for a solo founder or a small team, not a 200-person agency.
 
-> Built for the current **8-division, 106-agent** roster. The conductor is the **Agent & Workflow Orchestrator**; the final quality gate is the **QA Reality Checker** (defaults to "NEEDS WORK" until evidence proves otherwise).
+> Built for the current **8-division, 109-agent** roster. The conductor is the **Agent & Workflow Orchestrator**; the final quality gate is the **QA Reality Checker** (defaults to "NEEDS WORK" until evidence proves otherwise).
 
 ## The 8 divisions
 

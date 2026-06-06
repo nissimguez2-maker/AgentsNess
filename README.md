@@ -82,6 +82,7 @@ See the [Multi-Tool Integrations](#-multi-tool-integrations) section below for f
 | [🎛️ Agent & Workflow Orchestrator](engineering/Agent%20%26%20Workflow%20Orchestrator.md) | Maps every path through a system into build-ready specs, then runs the dev pipeline (plan → architecture → dev↔QA loop → integration) with hard quality gates. Use it to coordinate multi-agent builds and spec workflows before any code is written. |
 | [🔐 Agent Identity & Trust](engineering/Agent%20Identity%20%26%20Trust.md) | Designs identity for multi-agent systems — cryptographic agent identity, authentication, scoped delegation, and tamper-evident audit trails, plus a shared entity-resolution graph. Use it when agents take real actions and must prove who they are. |
 | [🤖 AI Engineer](engineering/AI%20Engineer.md) | Builds and ships ML/AI features into production — model development, data pipelines, and AI integration, with a focus on practical, scalable solutions. Use it to add intelligent features or stand up AI-powered apps. |
+| [🧨 AI Red Team Specialist](engineering/AI%20Red%20Team%20Specialist.md) | Adversarial tester for LLMs, apps, and agents — runs jailbreaks, prompt injection, and exfiltration probes under authorization to measure safety/robustness, then turns every finding into a concrete defense. Use it to stress-test AI guardrails before an attacker does. |
 | [🔌 API Tester](engineering/API%20Tester.md) | Validates APIs end to end — functional correctness, performance/load, and reliability across your services and third-party integrations. Use it to catch API breakage before users do. |
 | [⚙️ Automation Governance Architect](engineering/Automation%20Governance%20Architect.md) | A governance-first reviewer for business automations (n8n-first) that audits value, risk, and maintainability before you build. Use it to decide whether and how to automate, not just how to wire it up. |
 | [🏗️ Backend Architect](engineering/Backend%20Architect.md) | Designs scalable server-side systems — APIs, database architecture with query/performance tuning, microservices, and cloud infrastructure. Use it for the backbone that has to stay up and scale. |
@@ -94,6 +95,7 @@ See the [Multi-Tool Integrations](#-multi-tool-integrations) section below for f
 | [🖥️ Frontend Developer](engineering/Frontend%20Developer.md) | Builds modern, responsive, accessible web apps in React/Vue/Angular with pixel-perfect UI and performance optimization. Use it to implement the user-facing front end. |
 | [🔌 MCP Builder](engineering/MCP%20Builder.md) | Designs, builds, and tests Model Context Protocol servers that extend AI agents with custom tools, resources, and prompts. Use it to give your agents real, reusable capabilities. |
 | [📲 Mobile App Builder](engineering/Mobile%20App%20Builder.md) | Ships native-quality iOS/Android apps using native and cross-platform frameworks, fast. Use it to build or iterate on mobile applications. |
+| [🛡️ Model Safety & Alignment Researcher](engineering/Model%20Safety%20%26%20Alignment%20Researcher.md) | Open-weight model safety researcher — studies how refusal is represented (abliteration, activation steering) to evaluate, restore, harden, and detect tampering in models you're authorized to research. Use it to measure and prove an open model's safety, not assume it. |
 | [🧬 Prompt Engineer](engineering/Prompt%20Engineer.md) | Crafts, tests, and systematically optimizes LLM prompts — turning vague instructions into reliable, production-grade AI behaviors. Use it to make AI features consistent and dependable. |
 | [🧪 QA Engineer](engineering/QA%20Engineer.md) | Hands-on QA across performance (load, Core Web Vitals), accessibility (WCAG 2.2 AA), and test-results analysis, with data-driven release-readiness calls. Use it to answer 'is it fast, accessible, and ready to ship?' |
 | [🧐 QA Reality Checker](engineering/QA%20Reality%20Checker.md) | A skeptical, evidence-obsessed quality gate that demands proof for every claim, defaults to 'NEEDS WORK,' and won't certify production-readiness without it. Use it as the final check against fantasy approvals. |
@@ -127,6 +129,7 @@ See the [Multi-Tool Integrations](#-multi-tool-integrations) section below for f
 | [🎠 Carousel Growth Engine](marketing/Carousel%20Growth%20Engine.md) | Autonomously generates viral TikTok/Instagram carousels from any URL, publishes to feed with trending audio, and improves via a data-driven learning loop. Use it for hands-off short-form carousel growth. |
 | [✍️ Content Creator](marketing/Content%20Creator.md) | Develops multi-platform content strategy — editorial calendars, copy, and brand storytelling optimized for engagement across channels. Use it to plan and produce content at scale. |
 | [🎙️ Global Podcast Strategist](marketing/Global%20Podcast%20Strategist.md) | Grows podcasts through positioning, audience development, content strategy, and monetization on Spotify, Apple, and YouTube. Use it to turn a show into an audio brand that compounds. |
+| [🪶 Humanizer](marketing/Humanizer.md) | Turns stiff or AI-generated prose into natural human writing — strips machine tells, restores rhythm and voice, and preserves every fact and intent. Use it to make any draft read like a real person wrote it. |
 | [📸 Instagram Curator](marketing/Instagram%20Curator.md) | Masters Instagram aesthetics and multi-format content to build an engaged community. Use it for visual storytelling and growth on Instagram. |
 | [💼 LinkedIn Content Creator](marketing/LinkedIn%20Content%20Creator.md) | Builds thought leadership and personal brand on LinkedIn with algorithm- and culture-aware content that drives inbound. Use it to make the right people find you on LinkedIn. |
 | [📣 PR & Communications Manager](marketing/PR%20%26%20Communications%20Manager.md) | Handles media relations, press releases, crisis comms, executive thought leadership, and reputation management through earned media and narrative control. Use it to build and protect your reputation. |
@@ -221,7 +224,7 @@ See the [Multi-Tool Integrations](#-multi-tool-integrations) section below for f
 | [🧠 Psychologist](advisory/Psychologist.md) | A PhD-level behavioral & consumer psychologist — personality, cognitive biases, and social psychology applied to motivation, persuasion, personas, and team dynamics, grounded in named theory. Use it to understand why people buy and act. |
 | [🔗 Supply Chain Strategist](advisory/Supply%20Chain%20Strategist.md) | A supply-chain and procurement strategist — supplier development, strategic sourcing, quality control, and resilience, grounded in China's manufacturing ecosystem. Use it to build an efficient, resilient procurement engine. |
 
-> **106 agents across 8 divisions.** Activate any agent by name in your AI tool of choice.
+> **109 agents across 8 divisions.** Activate any agent by name in your AI tool of choice.
 
 ## 🎯 Real-World Use Cases
 
@@ -370,7 +373,7 @@ Each agent is designed with:
 
 ## 📊 Stats
 
-- 🎭 **106 specialized agents** across 8 divisions
+- 🎭 **109 specialized agents** across 8 divisions
 - 📝 **10,000+ lines** of personality, process, and code examples
 - ⏱️ **Months of iteration** from real-world usage
 - 🌟 **Battle-tested** in production environments
@@ -384,7 +387,9 @@ The Agency works natively with Claude Code, and ships conversion + install scrip
 
 ### Supported Tools
 
-- **[Claude Code](https://claude.ai/code)** — native `.md` agents, no conversion needed → `~/.claude/agents/`
+- **[Claude Code](https://claude.ai/code)** — native `.md` agents (subagents), no conversion needed → `~/.claude/agents/`
+- **Claude Skills** — one-pass `SKILL.md` skills → `~/.claude/skills/<slug>/`
+- **Hermes** — per-bot configs (`bot.yaml` + `system.md`) for deploying bots → `~/.hermes/bots/`
 - **[GitHub Copilot](https://github.com/copilot)** — native `.md` agents, no conversion needed → `~/.github/agents/` + `~/.copilot/agents/`
 - **[Antigravity](https://github.com/google-gemini/antigravity)** — `SKILL.md` per agent → `~/.gemini/antigravity/skills/`
 - **[Gemini CLI](https://github.com/google-gemini/gemini-cli)** — extension + `SKILL.md` files → `~/.gemini/extensions/agency-agents/`
@@ -752,7 +757,7 @@ MIT License - Use freely, commercially or personally. Attribution appreciated bu
 
 ## 🙏 Acknowledgments
 
-What started as a Reddit thread about AI agent specialization has grown into something remarkable — **106 agents across 8 divisions**, supported by a community of contributors from around the world. Every agent in this repo exists because someone cared enough to write it, test it, and share it.
+What started as a Reddit thread about AI agent specialization has grown into something remarkable — **109 agents across 8 divisions**, supported by a community of contributors from around the world. Every agent in this repo exists because someone cared enough to write it, test it, and share it.
 
 To everyone who has opened a PR, filed an issue, started a Discussion, or simply tried an agent and told us what worked — thank you. You're the reason The Agency keeps getting better.
 
